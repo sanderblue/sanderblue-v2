@@ -1,0 +1,299 @@
+.container {
+    .jumbotron {
+        background-color: rgba(50, 50, 50, 0);
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-top: 60px;
+
+        @include breakpoint(mobile) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.logo {
+    background: url("/assets/img/logo-250x304.png") no-repeat;
+    height: 304px;
+    width: 250px;
+
+    @include breakpoint(tablet) {
+        float: left;
+    }
+
+    @include breakpoint(mobile) {
+        float: none;
+        margin: 0 auto;
+        display: none;
+    }
+}
+
+.left-side {
+    @include breakpoint(mobile) {
+        width: 0%;
+    }
+}
+.right-side {
+    text-align: right;
+    float: right;
+
+    @include breakpoint(tablet) {
+        float: right;
+        width: 60%;
+    }
+
+    @include breakpoint(tablet_horizontal) {
+        width: 60%;
+    }
+
+    @include breakpoint(bootstrap_tablet) {
+        width: 60%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.hello {
+    @include text-shadow(3px 7px 16px rgba(0, 0, 0, .9));
+    font-family: $CenturyMT;
+    font-size: 5.25em;
+    line-height: 1.0em;
+
+    @include breakpoint(mobile) {
+        display: none;
+        // text-align: center;
+        // font-size: 3.75em;
+    }
+}
+
+.welcome {
+    @include text-shadow(0 3px 8px rgba(0, 0, 0, .75));
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 0em;
+
+    @include breakpoint(mobile) {
+        display: none;
+        // text-align: center;
+    }
+}
+
+.intro {
+    letter-spacing: 0.05em;
+    padding: {
+        top: 10px;
+        bottom: 13%;
+        left: 10px;
+        right: 12px;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.73em;
+        font-weight: 400;
+
+        &:last-child {
+            margin-top: 3%;
+        }
+    }
+}
+
+.info-holder {
+    @include background(linear-gradient(rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .5) 75%, rgba(50, 50, 50, .01) 100%));
+    @include text-shadow(0 3px 8px rgba(0, 0, 0, .75));
+}
+
+.info-sublinks {
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-top: 5%;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 0.85em;
+        padding-bottom: 10px;
+        margin-top: 2.5%;
+    }
+
+    .info-link {
+        @include text-shadow(0 6px 10px rgba(0, 0, 0, .8));
+        display: inline-block;
+        cursor: pointer;
+        margin: {
+            right: 20px;
+            left: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            @include opacity(.85);
+        }
+    }
+}
+
+.project {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.active:before {
+    content: url('/assets/img/icon-circles.png');
+    height: 10px;
+    width: 25px;
+    position: absolute;
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin: {
+        left: -24px;
+        top: 0px;
+    }
+}
+
+.about-header {
+    @include text-shadow(3px 7px 16px rgba(0, 0, 0, .9));
+    @include opacity(.93);
+    font-family: $CenturyMT;
+    font-size: 6.75em;
+    margin: {
+        bottom: -8px;
+    }
+}
+
+.sub-text {
+    @include text-shadow(3px 4px 8px rgba(0, 0, 0, .85));
+    text-align: right;
+    font-weight: 200;
+    letter-spacing: 0.07em;
+    font-size: 15px;
+    margin: {
+        right: 2px;
+        bottom: 50px;
+    }
+}
+
+.about-holder {
+    padding: 2%;
+    font-size: 0.85em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+
+    p {
+        margin: {
+            bottom: 3%;
+        }
+    }
+}
+
+.code-holder {
+    display: none;
+    padding: {
+        top: 10px;
+        bottom: 30px;
+        left: 0px;
+        right: 10px;
+    }
+}
+
+.skills-holder {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 24.2%;
+    vertical-align: text-top;
+
+    @include breakpoint(tablet) {
+        width: 24%;
+    }
+
+    // @include breakpoint(mobile) {
+    //     font-size: 0.9em;
+    //     width: 23%;
+    // }
+
+    // &:last-child {
+    //     @include breakpoint(mobile) {
+    //         margin-right: 8px;
+    //     }
+    // }
+    &.projects {
+        @include breakpoint(mobile_vertical) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &.languages, 
+    &.framework-items {
+        @include breakpoint(mobile_vertical) {
+            display: none;
+        }
+    }
+}
+
+.skill {
+    @include text-shadow(0 5px 8px rgba(0, 0, 0, .85));
+    font-size: 0.65em;
+    font-weight: 100;
+    color: rgba(255, 255, 255, .85);
+
+    a {
+        color: rgba(255, 255, 255, .85);
+
+        &:hover {
+            @include transition(all 0.25s ease-in-out);
+            color: rgba(255, 255, 255, .99);
+        }
+    }
+}
+
+.skill-header {
+    line-height: 1em;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin: {
+        bottom: 3.7%;
+    }
+}
+
+.social-icon-holder {
+    display: none;
+    padding: {
+        top: 2%;
+        bottom: 13%;
+        left: 2%;
+        right: 2%;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        padding-right: 0px;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 400;
+
+        @include breakpoint(tablet) {
+            margin-right: -0.6%;
+        }
+
+        @include breakpoint(mobile) {
+            margin-right: 4%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+

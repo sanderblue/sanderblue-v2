@@ -1,0 +1,30 @@
+$transition: all 0.1s ease-in-out;
+
+html {
+  background-image: url('../img/bg/treeOverRiver.jpg');
+  @include background-size(cover);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .85);
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: rgba(255, 255, 255, .99);
+    }
+}
+
+
+// Utilities
+.bold   { font-weight: 600; }
+.thin   { font-weight: 100; }
+.white  { color: #ffffff; }

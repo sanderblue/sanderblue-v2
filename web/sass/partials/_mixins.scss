@@ -1,0 +1,12 @@
+@mixin breakpoint($media) {
+  @if $media == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $media == landscape {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}

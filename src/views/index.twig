@@ -1,0 +1,148 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <div class="col-md-2 logo left-side"></div>
+        <div class="col-md-6 right-side">
+            <div class="hello">Hello!</div>
+            <div class="welcome">Welcome to my little space on the interwebs!</div>
+            <div class="info-sublinks">
+                <div class="info-link about active">about</div>
+                <div class="info-link code">work</div>
+                <div class="info-link follow">follow</div>
+            </div>
+            <div class="info-holder">
+                <div class="intro">
+                    <p>My name is Sander. I'm a web developer currently working at <a href="http://www.opensky.com" target="_blank" class="depalma-link bold white">OpenSky</a> in <a class="map-link bold white" href="https://maps.google.com/maps?q=Nashville,+TN&hl=en&ll=36.166289,-86.782808&spn=0.03721,0.075703&sll=36.308056,-86.597788&sspn=0.148569,0.302811&oq=nashville,+tn&hnear=Nashville,+Davidson,+Tennessee&t=m&z=14" target="_blank" class="bold white">Nashville, Tenneessee</a>.
+                    I enjoy turning great ideas into awesome applications. </p>
+                    <p>I also enjoy just about any outdoor activity. So does my dog, Theo. I'm a big fan of hiking, biking, camping, snowboarding, surfing, mountains, the ocean, and awesome weather. </p>
+                </div>
+                <div class="code-holder">
+                    <div class="skills-holder projects">
+                        <div class="skill-header">Projects</div>
+                        <div class="skill project">
+                            <a class="pop-gitgraph">GitGraph</a>
+
+                            <div id="project-gitgraph" class="popover">
+                                <div class="project-title gitgraph-title">GitGraph.js</div>
+                                <a href="https://github.com/sanderblue/gitGraph" target="_blank" class="github-page gitgraph-github"></a>
+                                <span class="close-popover" rel="popover">&#215;</span>
+                                <div class="project-description">
+                                    This is a jQuery plugin I built using Morris.js, Moment.js,
+                                    and GitHub's developer API. It displays a GitHub repository's
+                                    previous seven days of commit activity. It powers each of these
+                                    graphs in this section. It is currently in development with future
+                                    releases planned.
+                                </div>
+                                <div id="chartgitgraph">
+                                </div>
+                                <div class="recent">Recent GitHub Activity</div>
+                            </div>
+                        </div>
+                        <div class="skill project">
+                            <a class="pop-polymath">Polymath</a>
+
+                            <div id="project-polymath" class="popover">
+                                <div class="project-title polymath-title">Polymath</div>
+                                <a href="https://github.com/sanderblue/polymath" target="_blank" class="github-page polymath-github"></a>
+                                <span class="close-popover" rel="popover">&#215;</span>
+                                <div class="project-description">
+                                    Polymath is a multi-purpose PHP 5.3 Mathematics Library. Contains conversions,
+                                    random number generators, and other interesting calculations.
+                                </div>
+                                <div id="chartpolymath">
+                                </div>
+                                <div class="recent">Recent GitHub Activity</div>
+                            </div>
+                        </div>
+                        <div class="skill project">
+                            <a class="pop-api">JavaScript REST API</a>
+
+                            <div id="project-api" class="popover">
+                                <div class="project-title api-title">REST API</div>
+                                <a href="https://github.com/sanderblue/javascript-rest-api" target="_blank" class="github-page api-github"></a>
+                                <span class="close-popover" rel="popover">&#215;</span>
+                                <div class="project-description">
+                                    A REST API written in JavaScript using the Express.js framework for Node.
+                                </div>
+                                <div id="chartapi">
+                                </div>
+                                <div class="recent">Recent GitHub Activity</div>
+                            </div>
+                        </div>
+                        <div class="skill project">
+                            <a class="pop-angularexpress">Angular Express+MySQL</a>
+
+                            <div id="project-angularexpress" class="popover">
+                                <div class="project-title angular-express-title">Angular Express + MySQL</div>
+                                <a href="https://github.com/sanderblue/angular-express-mysql" target="_blank" class="github-page angular-express-mysql-github"></a>
+                                <span class="close-popover" rel="popover">&#215;</span>
+                                <div class="project-description">
+                                    This is a user login application seed for Angular, Express, and MySQL. Angular powers the frontend,
+                                    Express powers the backend, which utilizes a MySQL database and Sequelize ORM.
+                                </div>
+                                <div id="chartangularexpress">
+                                </div>
+                                <div class="recent">Recent GitHub Activity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-holder languages">
+                        <div class="skill-header">Code</div>
+                        <div class="skill">HTML5</div>
+                        <div class="skill">CSS3</div>
+                        <div class="skill">SASS</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">jQuery</div>
+                        <div class="skill">JSON</div>
+                        <div class="skill">CoffeeScript</div>
+                        <div class="skill">PHP</div>
+                    </div>
+                    <div class="skills-holder framework-items">
+                        <div class="skill-header">Utilities</div>
+                        <div class="skill">MySQL</div>
+                        <div class="skill">MongoDB</div>
+                        <div class="skill">Git</div>
+                        <div class="skill">GitHub</div>
+                        <div class="skill">PHPUnit</div>
+                    </div>
+                    <div class="skills-holder framework-items">
+                        <div class="skill-header">Frameworks</div>
+                        <div class="skill">
+                            <a href="http://symfony.com/" target="_blank">Symfony</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://www.doctrine-project.org/" target="_blank">Doctrine</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://emberjs.com/" target="_blank">Ember</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://knockoutjs.com/" target="_blank">Knockout</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://durandaljs.com/" target="_blank">Durandal</a>
+                        </div>
+                        <div class="skill">
+                            <a href="http://angularjs.org/" target="_blank">Angular</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icon-holder">
+                    <a href="http://blog.sanderblue.com" target="_blank" class="social-icon tumblr">Blog</a>
+                    <a href="https://twitter.com/SanderBlue" target="_blank" class="social-icon twitter">Twitter</a>
+                    <a href="https://www.facebook.com/sander.blue" target="_blank" class="social-icon facebook">Facebook</a>
+                    <a href="https://www.linkedin.com/in/sanderblue" target="_blank" class="social-icon linkedin">LinkedIn</a>
+                    <a href="https://www.github.com/sanderblue" target="_blank" class="social-icon github">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/graphs.js"></script>
+{% endblock %}
