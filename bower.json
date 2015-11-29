@@ -1,0 +1,24 @@
+{
+  "name": "sanderblue.com",
+  "description": "This is personal website",
+  "main": "index.js",
+  "authors": [
+    "Sander Blue <william.a.blue@gmail.com>"
+  ],
+  "homepage": "https://github.com/sanderblue/sanderblue-v2",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.0.4",
+    "requirejs": "~2.1.22"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "sanderblue.com",
+  "version": "3.0.0",
+  "description": "This is personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanderblue/sanderblue-v2.git"
+  },
+  "author": "Sander Blue <william.a.blue@gmail.com>",
+  "license": {
+    "notValid": true
+  },
+  "bugs": {
+    "url": "https://github.com/sanderblue/sanderblue-v2/issues"
+  },
+  "homepage": "https://github.com/sanderblue/sanderblue-v2#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0",
+    "require-dir": "^0.3.0",
+    "requirejs": "^2.1.22"
+  }
+}
