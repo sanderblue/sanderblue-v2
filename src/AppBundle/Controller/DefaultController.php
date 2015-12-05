@@ -13,9 +13,11 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $baseUrl = realpath($this->container->getParameter('kernel.root_dir').'/..');
+
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-        ));
+        return $this->render('default/index.html.twig', [
+            'baseUrl' => $baseUrl,
+        ]);
     }
 }

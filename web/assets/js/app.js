@@ -1,7 +1,9 @@
 define(
 [
-    'js/Modules/Test'
+
 ],
 function() {
-    console.debug('POOOOOOP!!!');
+    if (window.Foundation) {
+        $(document).foundation();
+    }
 });

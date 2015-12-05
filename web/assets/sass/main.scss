@@ -1,3 +1,11 @@
 body {
-    background: transparent;
+    background: white;
+    height: 100vh;
+}
+
+.off-canvas-wrapper,
+.off-canvas-wrapper-inner,
+.menu-main,
+.container-main {
+    height: 100vh;
 }
