@@ -1,3 +1,6 @@
+$menuWidthLarge: 30%;
+$contentWidthLarge: 100 - $menuWidthLarge;
+
 body {
     background: white;
     height: 100vh;
@@ -9,3 +12,18 @@ body {
 .container-main {
     height: 100vh;
 }
+
+.off-canvas {
+    &.position-left {
+        &.menu-main {
+            width: $menuWidthLarge;
+            min-width: 250px;
+        }
+    }
+}
+
+.position-left.reveal-for-large~.off-canvas-content {
+    margin-left: $menuWidthLarge;
+}
+
+
