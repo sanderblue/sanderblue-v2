@@ -15,21 +15,41 @@ body {
     font-weight: 900;
     background: white;
     height: 100vh;
+
+    // background: url(../img/starry-night-dark.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.non-font {
+    font-family: sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+}
+
+.align-vertical {
+     @include flexbox();
+     height: 100vh;
 }
 
 .heading-main {
-    @include flexbox();
-    height: 100vh;
     font-size: 6rem;
-    width: inherit;
-    // letter-spacing: -0.4rem;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    // text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.5);
 
     .special {
         width: inherit;
 
-        > div {
+        .first-name,
+        .last-name {
             position: relative;
             display: inline;
+            letter-spacing: 0.2rem;
 
             span {
                 position: relative;
@@ -128,5 +148,10 @@ body {
                 }
             }
         }
+    }
+
+    .expertise {
+        font-size: 16px;
+        letter-spacing: 0.5rem;
     }
 }
