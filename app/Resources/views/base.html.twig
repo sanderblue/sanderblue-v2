@@ -1,3 +1,5 @@
+{% set route = app.request.attributes.get('_route') %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,6 +7,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
+            <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/foundation-sites/dist/foundation.min.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
         {% endblock %}
@@ -12,6 +15,22 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon/favicon.ico') }}" />
     </head>
     <body cz-shortcut-listen="true">
+        {% block header %}
+            {# <header class="top-bar header">
+                <ul class="menu expanded">
+                    <li class="menu-item text-center{% if route == 'developer' %} is-active{% endif %}">
+                        <a href="{{ path('developer') }}">developer</a>
+                    </li>
+                    <li class="menu-item text-center{% if route == 'designer' %} is-active{% endif %}">
+                        <a href="{{ '' }}">designer</a>
+                    </li>
+                    <li class="menu-item text-center{% if route == 'adventurer' %} is-active{% endif %}">
+                        <a href="{{ '' }}">adventurer</a>
+                    </li>
+                </ul>
+            </header> #}
+        {% endblock %}
+
         {% block body %}{% endblock %}
 
         {% block javascripts %}

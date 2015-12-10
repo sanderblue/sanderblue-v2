@@ -1,31 +1,49 @@
 define(
 [
     'backbone',
-    'js/Controllers/IndexController'
+    'js/Controllers/IndexController',
+    'js/Controllers/DeveloperController'
 ],
 function(
     Backbone,
-    IndexController
+    IndexController,
+    DeveloperController
 )
 {
     console.debug('Routes Backbone: ', Backbone);
 
     var AppRouter = Backbone.Router.extend({
         routes: {
-            '': 'index',    // /
-            'home': 'index',    // /home
+            '': 'index',
+            'developer': 'developer'
+            // ,
+            // 'designer': 'designer',
+            // 'adventurer': 'adventurer',
         },
 
         index: function() {
             return new IndexController();
+        },
+
+        developer: function() {
+            return new DeveloperController();
         }
+        // ,
+
+        // designer: function() {
+        //     return new DesignerController();
+        // },
+
+        // adventurer: function() {
+        //     return new AdventurerController();
+        // }
     });
 
     var appRouter = new AppRouter();
 
-    appRouter.on('route', function(page) {
-        console.debug('Page!!!', page);
-    });
+    // appRouter.on('route', function(page) {
+    //     console.debug('Page!!!', page);
+    // });
 
     Backbone.history.start({ pushState: true });
 

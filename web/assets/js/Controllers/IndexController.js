@@ -5,22 +5,11 @@ define(
 function(User) {
 
     function IndexController(options) {
-        this.user = new User({'surname': 'blue'});
+        this.user = new User();
+
+        console.debug('User', this.user);
+        console.debug('Full Name:', this.user.getFullName());
     }
 
     return IndexController;
-
-    // return function IndexController() {
-    //     return {
-    //         index: function() {
-    //             alert('WTF...................');
-    //         },
-    //         show: function(id) {
-
-    //         },
-    //         edit: function(id) {
-
-    //         }
-    //     };
-    // };
 });

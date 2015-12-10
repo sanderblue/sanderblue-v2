@@ -5,17 +5,18 @@ define(
 function(Backbone) {
 
     var User = Backbone.Model.extend({
+
         initialize: function(options) {
-            console.debug('USER MODEL', options);
+
         },
 
-        getFullName: function () {
+        getFullName: function() {
             return this.get('name') +' '+ this.get('surname');
         },
 
         defaults: {
-            name: 'John',
-            surname: 'Smith'
+            name: 'Sander',
+            surname: 'Blue'
         }
     });
 

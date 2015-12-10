@@ -1,16 +1,103 @@
+@font-face {
+  font-family: VarelaRound;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/varelaround/varelaround-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/varelaround/varelaround-regular-webfont.woff2") format("woff2"), url("../fonts/varelaround/varelaround-regular-webfont.woff") format("woff"), url("../fonts/varelaround/varelaround-regular-webfont.ttf") format("truetype"), url("../fonts/varelaround/varelaround-regular-webfont.svg#VarelaRound") format("svg"); }
+
+@font-face {
+  font-family: Galano;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/galano/galano-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/galano/galano-webfont.woff2") format("woff2"), url("../fonts/galano/galano-webfont.woff") format("woff"), url("../fonts/galano/galano-webfont.ttf") format("truetype"), url("../fonts/galano/galano-webfont.svg#Galano") format("svg"); }
+
+@font-face {
+  font-family: Galano;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/galano/galano-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/galano/galano-bold-webfont.woff2") format("woff2"), url("../fonts/galano/galano-bold-webfont.woff") format("woff"), url("../fonts/galano/galano-bold-webfont.ttf") format("truetype"), url("../fonts/galano/galano-bold-webfont.svg#Galano") format("svg"); }
+
+/**
+ * Font Families
+ */
+.menu .menu-item.is-active a {
+  border-bottom: 2px solid orange; }
+
+.menu .menu-item a {
+  padding: 1.5rem; }
+
 body {
+  font-family: 'Galano', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
   background: white;
   height: 100vh; }
 
-.off-canvas-wrapper,
-.off-canvas-wrapper-inner,
-.menu-main,
-.container-main {
-  height: 100vh; }
-
-.off-canvas.position-left.menu-main {
-  width: 30%;
-  min-width: 250px; }
-
-.position-left.reveal-for-large ~ .off-canvas-content {
-  margin-left: 30%; }
+.heading-main {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 6rem;
+  width: inherit; }
+  .heading-main .special {
+    width: inherit; }
+    .heading-main .special > div {
+      position: relative;
+      display: inline; }
+      .heading-main .special > div span {
+        position: relative; }
+        .heading-main .special > div span:after {
+          content: '';
+          height: 25px;
+          width: 25px;
+          border: 1px solid #e6e6e6;
+          border-radius: 50%;
+          position: absolute; }
+        .heading-main .special > div span.s:after {
+          border: 1px solid #e6e6e6;
+          height: 32px;
+          width: 32px;
+          top: 14%;
+          right: -8%; }
+        .heading-main .special > div span.a:after {
+          display: none; }
+        .heading-main .special > div span.n:after {
+          border: 1px solid #e6e6e6;
+          height: 35px;
+          width: 35px;
+          bottom: 5%;
+          left: 0; }
+        .heading-main .special > div span.d:after {
+          border: 1px solid #e6e6e6;
+          height: 65px;
+          width: 65px;
+          top: -45%;
+          left: 40%; }
+        .heading-main .special > div span.e:after {
+          display: none; }
+        .heading-main .special > div span.r:after {
+          display: none; }
+        .heading-main .special > div span.b:after {
+          border: 1px solid #e6e6e6;
+          height: 30px;
+          width: 30px;
+          top: -13%;
+          left: -20%; }
+        .heading-main .special > div span.l:after {
+          border: 1px solid #e6e6e6;
+          height: 55px;
+          width: 55px;
+          bottom: -10%;
+          left: -15%; }
+        .heading-main .special > div span.u:after {
+          border: 1px solid #e6e6e6;
+          height: 35px;
+          width: 35px;
+          top: 8%;
+          right: -10%; }
+        .heading-main .special > div span.e:after {
+          display: none; }

@@ -1,23 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="off-canvas-wrapper">
-        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-            <div class="off-canvas position-left reveal-for-large menu-main" id="offCanvas" data-off-canvas>
-                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                    {% for item in menuItems %}
-                        <li class="accordion-item">
-                            <a href="#menu-developer" role="tab" class="accordion-title" id="menu-developer-heading" aria-controls="menu-developer">{{ item.name }}</a>
-                            <div id="menu-developer" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="menu-developer-heading">
-                                test
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="off-canvas-content content-main" data-off-canvas-content>
-                THIS IS MY PAGE
-            </div>
+    <div class="row column">
+        <div class="heading-main text-center">
+            <div class="special">
+                <div class="first-name">
+                    <span class="s">s</span>
+                    <span class="a">a</span>
+                    <span class="n">n</span>
+                    <span class="d">d</span>
+                    <span class="e">e</span>
+                    <span class="r">r</span>
+                </div>
+                <div class="last-name">
+                    <span class="b">b</span>
+                    <span class="l">l</span>
+                    <span class="u">u</span>
+                    <span class="e">e</span>
+                </div>
+            <div>
+            {# <div class="expertise">
+                <a class="expertise-link" href="/developer">DEVELOPER</a>
+                <a class="expertise-link" href="/thinker">THINKER</a>
+            </div> #}
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,13 @@
+.menu {
+    .menu-item {
+        &.is-active {
+            a {
+                border-bottom: 2px solid orange;
+            }
+        }
+
+        a {
+            padding: 1.5rem;
+        }
+    }
+}

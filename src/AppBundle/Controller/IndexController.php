@@ -13,46 +13,14 @@ class IndexController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $baseUrl = realpath($this->container->getParameter('kernel.root_dir').'/..');
-
-        // replace this example code with whatever you need
-        return $this->render('index/index.html.twig', [
-            'baseUrl' => $baseUrl,
-            'menuItems' => [
-                [
-                    'name' => 'developer',
-                ],
-                [
-                    'name' => 'thinker',
-                ],
-                [
-                    'name' => 'dreamer',
-                ]
-            ],
-        ]);
+        return $this->render('index/index.html.twig', []);
     }
 
     /**
-     * @Route("/home", name="homepagetest")
+     * @Route("/developer", name="developer")
      */
-    public function homeAction(Request $request)
+    public function developerAction(Request $request)
     {
-        $baseUrl = realpath($this->container->getParameter('kernel.root_dir').'/..');
-
-        // replace this example code with whatever you need
-        return $this->render('index/index.html.twig', [
-            'baseUrl' => $baseUrl,
-            'menuItems' => [
-                [
-                    'name' => 'developer',
-                ],
-                [
-                    'name' => 'thinker',
-                ],
-                [
-                    'name' => 'dreamer',
-                ]
-            ],
-        ]);
+        return $this->render('index/index.html.twig', []);
     }
 }
