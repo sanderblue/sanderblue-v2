@@ -1,6 +1,6 @@
 @include font-face(VarelaRound, '../fonts/varelaround/varelaround-regular-webfont');
 @include font-face(Galano, '../fonts/galano/galano-webfont');
-@include font-face(Galano, '../fonts/galano/galano-bold-webfont');
+@include font-face(GalanoBold, '../fonts/galano/galano-bold-webfont');
 
 
 /**
@@ -8,12 +8,10 @@
  */
 @mixin VarelaRound() {
     font-family: 'VarelaRound', sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 @mixin Galano() {
     font-family: 'Galano', sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 @mixin Main() {

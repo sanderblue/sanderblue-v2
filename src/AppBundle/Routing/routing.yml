@@ -1,0 +1,9 @@
+home:
+    pattern: /
+    defaults: { _controller: AppBundle:Index:index }
+    requirements: { _method: get }
+
+developer:
+    pattern: /developer
+    defaults: { _controller: AppBundle:Developer:index }
+    requirements: { _method: get }

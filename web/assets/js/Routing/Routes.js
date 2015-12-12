@@ -10,8 +10,6 @@ function(
     DeveloperController
 )
 {
-    console.debug('Routes Backbone: ', Backbone);
-
     var AppRouter = Backbone.Router.extend({
         routes: {
             '': 'index',

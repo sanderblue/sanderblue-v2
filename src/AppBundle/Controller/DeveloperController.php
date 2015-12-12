@@ -6,10 +6,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class IndexController extends Controller
+class DeveloperController extends Controller
 {
     public function indexAction(Request $request)
     {
-        return $this->render('index/index.html.twig', []);
+        return $this->render('developer/index.html.twig', []);
     }
 }

@@ -1,5 +1,6 @@
 define(
 [
+    'backbone',
     'foundation',
     'js/Routing/Routes'
 ],

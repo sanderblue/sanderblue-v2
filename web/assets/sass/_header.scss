@@ -1,13 +1,39 @@
 .menu {
     .menu-item {
-        &.is-active {
-            a {
-                border-bottom: 2px solid orange;
-            }
-        }
-
         a {
-            padding: 1.5rem;
+            font-weight: 300;
+            color: white;
+            padding: 0.5rem;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -1px;
+                height: 1px;
+                width: 0%;
+                transition: width 0.2s;
+                background-color: $blueBase;
+            }
+
+            &:before {
+                right: 50%;
+                transform: rotate(180deg);
+                -webkit-transform: translate(180deg);
+            }
+
+            &:after {
+                left: 50%;
+            }
+
+            &:hover {
+                &:before,
+                &:after {
+                    width: 50%;
+                }
+            }
         }
     }
 }
