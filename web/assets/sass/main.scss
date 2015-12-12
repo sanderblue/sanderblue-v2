@@ -5,23 +5,38 @@
 $menuWidthLarge: 25%;
 $contentWidthLarge: 100 - $menuWidthLarge;
 $bubbleBorderColor: #e6e6e6;
-$blueBase: #00b0f0;
+$color-blue-base: #31c4f9;
+$font-color-dark-base: rgba(20, 20, 20, 1);
+$font-color-light-base: rgba(230, 230, 230, 1);
+$bg-overlay: linear-gradient(rgba(30, 30, 30, 0.75), rgba(30, 30, 30, 0.75));
 
 // App
 @import 'animations';
 @import 'mixins/mixins';
 @import 'fonts/fonts';
 @import 'foundation';
-@import 'header.scss';
+@import 'header';
+@import 'hero';
+@import 'menu';
+
+@-webkit-keyframes opacity {
+    0%   {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 body {
     @include font-main();
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
+    color: $font-color-light-base;
     background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
     height: 100vh;
-
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url(../img/ShootingStarsTreeline.jpg?test=3) no-repeat center center fixed;
+    background: $bg-overlay, rgba(0,0,0,0.6) url(../img/ShootingStarsTreeline.jpg?test=3) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,11 +44,18 @@ body {
 
     a {
         transition: color 0.2s;
-        color: black;
+        color: rgba(225, 225, 225, 0.75);
 
         &:hover {
-            color: #2d2d2d;
+            color: rgba(225, 225, 225, 1);
         }
+    }
+
+    * {
+        -webkit-animation: opacity 0.25s;
+        -moz-animation:    opacity 0.25s;
+        -o-animation:      opacity 0.25s;
+        animation:         opacity 0.25s;
     }
 }
 
@@ -47,131 +69,9 @@ body {
 .align-vertical {
      @include flexbox();
      height: 100vh;
-}
 
-.heading-main {
-    width: 100%;
-    display: block;
-    margin: 0 auto 5% auto;
-
-    .full-name {
-        font-size: 4.5rem;
-        width: inherit;
-
-        .first-name,
-        .last-name {
-            position: relative;
-            display: inline;
-            letter-spacing: 0.2rem;
-
-            span {
-                position: relative;
-
-                &:after {
-                    content: '';
-                    height: 0.5em;
-                    width: 0.5em;
-                    border: 1px solid $bubbleBorderColor;
-                    border-radius: 50%;
-                    position: absolute;
-                    opacity: 0.4;
-                }
-
-                &.s {
-                    &:after {
-                        height: 0.4em;
-                        width: 0.4em;
-                        top: 14%;
-                        right: -8%;
-                    }
-                }
-
-                &.a {
-                    &:after {
-                        display: none;
-                    }
-                }
-
-                &.n {
-                    &:after {
-                        height: 0.5em;
-                        width: 0.5em;
-                        bottom: 0;
-                        right: 45%;
-                    }
-                }
-
-                &.d {
-                    &:after {
-                        height: 0.75em;
-                        width: 0.75em;
-                        top: -45%;
-                        left: 40%;
-                    }
-                }
-
-                &.e {
-                    &:after {
-                        display: none;
-                    }
-                }
-
-                &.r {
-                    &:after {
-                        height: 0.3em;
-                        width: 0.3em;
-                        top: 35%;
-                        left: -25%;
-                    }
-                }
-
-                &.b {
-                    &:after {
-                        height: 0.6em;
-                        width: 0.6em;
-                        top: -15%;
-                        left: -20%;
-                    }
-                }
-
-                &.l {
-                    &:after {
-                       height: 0.8em;
-                       width: 0.8em;
-                       bottom: -10%;
-                       left: -15%;
-                   }
-                }
-
-                &.u {
-                    &:after {
-                        height: 0.5em;
-                        width: 0.5em;
-                        top: 8%;
-                        right: -10%;
-                    }
-                }
-
-                &.e {
-                    &:after {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .expertise {
-        font-size: 14px;
-        letter-spacing: 0.25rem;
-
-        .expertise-link {
-            transition: border 0.2s ease;
-            border-bottom: 1px solid transparent;
-
-            &:hover {
-                border-bottom: 1px solid #00ff3b; // green
-            }
-        }
+    .align-vertical-up {
+        margin-top: -100px;
     }
 }
+

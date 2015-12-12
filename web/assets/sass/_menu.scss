@@ -1,0 +1,101 @@
+.off-canvas-small {
+    .top-bar {
+        width: inherit;
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .menu {
+            width: inherit;
+
+            .menu-item {
+                width: inherit;
+            }
+        }
+    }
+
+    .menu-item.logo {
+        @include Varela();
+        font-size: 2rem;
+        width: 100%;
+
+        a {
+            padding: 0.75rem 0 0.6rem 0;
+            position: relative;
+            margin: 0.5rem 1.25rem 0 1.25rem;
+        }
+    }
+}
+
+.menu {
+    &.align-left {
+        @media screen and (min-width: 40rem) {
+            margin-left: 2%;
+        }
+    }
+
+    &.align-right {
+        @media screen and (min-width: 40rem) {
+            margin-right: 2%;
+        }
+    }
+
+    .menu-item {
+        a {
+            font-weight: 100;
+            color: rgba(230, 230, 230, 0.85);
+            padding: 0.75rem 1.75rem 0.6rem 1.75rem;
+            position: relative;
+            margin: 0.5rem 0.25rem 0 0.25rem;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -1px;
+                height: 1px;
+                width: 0%;
+                transition: width 0.2s;
+                background-color: $color-blue-base;
+            }
+
+            &:before {
+                right: 50%;
+                transform: rotate(180deg);
+                -webkit-transform: translate(180deg);
+            }
+
+            &:after {
+                left: 50%;
+            }
+
+            &:hover {
+                color: rgba(240, 240, 240, 1);
+
+                &:before,
+                &:after {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    &.side-menu {
+        width: inherit;
+        padding-left: 2rem;
+
+        .menu-item {
+            a {
+                @include GeomanistItalic();
+                padding: 0.75rem 1.75rem 0.6rem 0;
+                margin-left: 0;
+            }
+        }
+    }
+}

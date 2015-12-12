@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author"  content="">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
@@ -16,19 +19,7 @@
     </head>
     <body cz-shortcut-listen="true">
         {% block header %}
-            <header class="top-bar header">
-                <ul class="menu expanded">
-                    <li class="menu-item text-center{% if route == 'developer' %} is-active{% endif %}">
-                        <a href="{{ path('developer') }}">developer</a>
-                    </li>
-                    <li class="menu-item text-center{% if route == 'designer' %} is-active{% endif %}">
-                        <a href="{{ '' }}">designer</a>
-                    </li>
-                    <li class="menu-item text-center{% if route == 'adventurer' %} is-active{% endif %}">
-                        <a href="{{ '' }}">adventurer</a>
-                    </li>
-                </ul>
-            </header>
+            {% include 'header.html.twig' %}
         {% endblock %}
 
         {% block body %}{% endblock %}

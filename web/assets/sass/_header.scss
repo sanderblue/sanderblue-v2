@@ -1,39 +1,4 @@
-.menu {
-    .menu-item {
-        a {
-            font-weight: 300;
-            color: white;
-            padding: 0.5rem;
-            position: relative;
-
-            &:before,
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: -1px;
-                height: 1px;
-                width: 0%;
-                transition: width 0.2s;
-                background-color: $blueBase;
-            }
-
-            &:before {
-                right: 50%;
-                transform: rotate(180deg);
-                -webkit-transform: translate(180deg);
-            }
-
-            &:after {
-                left: 50%;
-            }
-
-            &:hover {
-                &:before,
-                &:after {
-                    width: 50%;
-                }
-            }
-        }
-    }
+.top-bar-left,
+.top-bar-right {
+    width: 50%;
 }

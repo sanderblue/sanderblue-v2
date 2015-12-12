@@ -7,6 +7,13 @@ h6 {
 
 }
 
+p {
+    @include font-paragraph();
+    font-size: 1.1rem;
+    line-height: 2;
+    letter-spacing: 0.025rem;
+}
+
 .top-bar {
     padding: 0;
     background-color: transparent;
@@ -14,4 +21,22 @@ h6 {
     ul {
         background-color: inherit;
     }
+}
+
+.off-canvas,
+.off-canvas-content {
+    background: transparent;
+}
+
+$off-canvas-width: 150px;
+$off-canvas-width-small: 150px;
+
+.off-canvas {
+    &.off-canvas-small {
+        width: $off-canvas-width-small;
+    }
+}
+
+.off-canvas-content {
+    box-shadow: none;
 }

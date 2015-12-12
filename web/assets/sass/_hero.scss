@@ -1,0 +1,126 @@
+.heading-main {
+    width: 100%;
+    display: block;
+    margin: 0 auto 5% auto;
+
+    .full-name {
+        font-size: 2rem;
+        width: inherit;
+        color: rgba(200, 200, 200, 1);
+
+        @media screen and (min-width: 40rem) {
+            font-size: 5rem;
+        }
+
+        .first-name,
+        .last-name {
+            position: relative;
+            display: inline;
+            letter-spacing: 0.2rem;
+
+            span {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    height: 0.5em;
+                    width: 0.5em;
+                    border: 1px solid $bubbleBorderColor;
+                    border-radius: 50%;
+                    position: absolute;
+                    opacity: 0.5;
+                }
+
+                &.s {
+                    &:after {
+                        height: 0.4em;
+                        width: 0.4em;
+                        top: 14%;
+                        right: -8%;
+                    }
+                }
+
+                &.a {
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &.n {
+                    &:after {
+                        height: 0.5em;
+                        width: 0.5em;
+                        bottom: 0;
+                        right: 45%;
+                    }
+                }
+
+                &.d {
+                    &:after {
+                        height: 0.75em;
+                        width: 0.75em;
+                        top: -45%;
+                        left: 40%;
+                    }
+                }
+
+                &.e {
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &.r {
+                    &:after {
+                        height: 0.3em;
+                        width: 0.3em;
+                        top: 35%;
+                        left: -25%;
+                    }
+                }
+
+                &.b {
+                    &:after {
+                        height: 0.6em;
+                        width: 0.6em;
+                        top: -15%;
+                        left: -20%;
+                    }
+                }
+
+                &.l {
+                    &:after {
+                       height: 0.8em;
+                       width: 0.8em;
+                       bottom: -10%;
+                       left: -15%;
+                   }
+                }
+
+                &.u {
+                    &:after {
+                        height: 0.5em;
+                        width: 0.5em;
+                        top: 8%;
+                        right: -10%;
+                    }
+                }
+
+                &.e {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .expertise {
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
+
+        .expertise-link {
+
+        }
+    }
+}

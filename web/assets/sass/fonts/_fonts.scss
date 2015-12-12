@@ -1,17 +1,31 @@
-@include font-face(VarelaRound, '../fonts/varelaround/varelaround-regular-webfont');
-@include font-face(Galano, '../fonts/galano/galano-webfont');
-@include font-face(GalanoBold, '../fonts/galano/galano-bold-webfont');
+@include font-face('Varela', '../fonts/varelaround/varelaround-regular-webfont');
+@include font-face('Geomanist', '../fonts/geomanist/geomanist-regular-webfont');
+@include font-face('GeomanistItalic', '../fonts/geomanist/geomanist-regular-italic-webfont');
+@include font-face('Galano', '../fonts/galano/galano-webfont');
+@include font-face('GalanoBold', '../fonts/galano/galano-bold-webfont');
 
 
 /**
  * Font Families
  */
-@mixin VarelaRound() {
-    font-family: 'VarelaRound', sans-serif;
+@mixin Varela() {
+    font-family: 'Varela', sans-serif;
 }
 
 @mixin Galano() {
     font-family: 'Galano', sans-serif;
+}
+
+@mixin GalanoBold() {
+    font-family: 'GalanoBold', sans-serif;
+}
+
+@mixin Geomanist() {
+    font-family: 'Geomanist', sans-serif;
+}
+
+@mixin GeomanistItalic() {
+    font-family: 'GeomanistItalic', sans-serif;
 }
 
 @mixin Main() {
@@ -20,4 +34,12 @@
 
 @mixin font-main() {
     @include Main();
+}
+
+@mixin font-bold() {
+    @include GalanoBold();
+}
+
+@mixin font-paragraph() {
+    @include Geomanist();
 }
