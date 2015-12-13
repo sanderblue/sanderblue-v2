@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'sidebar.html.twig' %}
+
+    <div class="align-vertical">
+        <div class="row align-center large-6 align-vertical-up">
+            {% for project in projects %}
+                <div class="column small-4">
+                    <img class="thumbnail" src="{{ project.thumbnail }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
