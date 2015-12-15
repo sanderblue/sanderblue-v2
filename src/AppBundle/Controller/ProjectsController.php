@@ -18,7 +18,7 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/solar-system-threejs',
                     'bower' => null,
                     'npm' => null,
-                    'thumbnail' => 'assets/img/projects/screenshot-solar-system-threejs.png',
+                    'thumbnail' => 'assets/img/projects/thumbnail-solar-system-threejs.jpg',
                 ],
                 [
                     'name' => 'Data Visualizations',
@@ -26,7 +26,7 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/data-visualizations',
                     'bower' => null,
                     'npm' => null,
-                    'thumbnail' => 'assets/img/projects/screenshot-data-visualizations.png',
+                    'thumbnail' => 'assets/img/projects/thumbnail-data-visualizations.jpg',
                 ],
                 [
                     'name' => 'GitGraph',
@@ -34,7 +34,7 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/gitGraph',
                     'bower' => null,
                     'npm' => null,
-                    'thumbnail' => 'assets/img/projects/screenshot-gitgraph.png',
+                    'thumbnail' => 'assets/img/projects/thumbnail-gitgraph.jpg',
                 ],
                 [
                     'name' => 'AjaxRequest',
@@ -42,7 +42,7 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/ajaxrequest',
                     'bower' => null,
                     'npm' => 'https://www.npmjs.com/package/ajaxrequest',
-                    'thumbnail' => 'assets/img/projects/screenshot-ajaxrequest.png',
+                    'thumbnail' => 'assets/img/projects/thumbnail-ajaxrequest.jpg',
                 ],
             ]
         ]);

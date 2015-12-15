@@ -3,9 +3,13 @@
 }
 
 .project-panel {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 40em) {
+        margin-bottom: 5rem;
+        padding-left: 2.75rem;
+        padding-right: 2.75rem;
+    }
 
     a.thumbnail-link  {
         position: relative;
@@ -36,6 +40,8 @@
         }
 
         img {
+            display: block;
+            width: 100%;
             border: none;
             transition: transform 1000ms ease;
         }

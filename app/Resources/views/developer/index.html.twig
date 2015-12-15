@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% include 'sidebar.html.twig' %}
+    {# {% include 'sidebar.html.twig' %} #}
 
     <div class="align-vertical">
         <div class="row align-center large-6 align-vertical-up">
             <div class="column large-6">
-                <p>I'm a Senior Frontend Developer working at <a>OpenSky</a>. Our dev stack is powered by Symfony and Doctrine on the backend and Backbone, RequireJS, and Foundation on the frontend.</p>
+                <p>I'm a Senior Frontend Developer working at <a href="https://www.opensky.com">OpenSky</a>. Our dev stack is powered by Symfony and Doctrine on the backend and Backbone, RequireJS, and Foundation on the frontend.</p>
             </div>
             <div class="column large-6">
-                <p>When I'm not working on OpenSky projects, I'm probably working on one of several ongoing <a>side projects</a>.</p>
+                <p>When I'm not working on OpenSky projects, I'm probably working on one of several ongoing <a href="{{ path('projects') }}">side projects</a>.</p>
             </div>
         </div>
     </div>
