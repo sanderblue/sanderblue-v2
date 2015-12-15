@@ -1,18 +1,30 @@
 <header class="top-bar fixed">
     <div class="top-bar-left">
-        <ul class="menu" data-dropdown-menu>
+        <ul class="menu">
             <li class="menu-item">
                 <a href="{{ path('home') }}">sb</a>
             </li>
         </ul>
     </div>
     <div class="top-bar-right">
-        <ul class="menu align-right">
+        <ul class="dropdown menu align-right" data-dropdown-menu>
             <li class="menu-item text-center">
-                <a href="{{ '' }}">adventurer</a>
+                <a href="{{ '' }}" class="has-dropdown">adventurer</a>
             </li>
-            <li class="menu-item text-center">
-                <a href="{{ path('developer') }}">developer</a>
+            <li class="menu-item text-center has-submenu">
+                <a href="{{ path('developer') }}" class="has-dropdown">developer</a>
+
+                <ul class="submenu menu vertical" data-submenu>
+                    <li class="menu-item text-center">
+                        <a href="{{ path('projects') }}">projects</a>
+                    </li>
+                    <li class="menu-item text-center">
+                        <a href="{{ '' }}">about</a>
+                    </li>
+                    <li class="menu-item text-center">
+                        <a href="{{ '' }}">hire me</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

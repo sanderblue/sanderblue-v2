@@ -44,3 +44,23 @@ $off-canvas-width-small: 150px;
 .thumbnail {
     margin-bottom: 0;
 }
+
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after {
+    border: none;
+    top: initial;
+    width: initial;
+    height: 0;
+}
+
+.dropdown.menu .is-dropdown-submenu-parent a::after {
+    float: none;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.dropdown.menu .submenu {
+    background: rgba(10, 10, 10, 0.3);
+    border: 0;
+    width: 100%;
+    min-width: auto;
+}
