@@ -18,7 +18,7 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/solar-system-threejs',
                     'bower' => null,
                     'npm' => null,
-                    'thumbnail' => 'http://i.space.com/images/i/000/045/777/i02/light-rays-over-paranal-observatory-1600.jpg',
+                    'thumbnail' => 'assets/img/projects/screenshot-solar-system-threejs.png',
                 ],
                 [
                     'name' => 'Data Visualizations',
@@ -26,7 +26,15 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/data-visualizations',
                     'bower' => null,
                     'npm' => null,
-                    'thumbnail' => 'http://i.space.com/images/i/000/045/777/i02/light-rays-over-paranal-observatory-1600.jpg',
+                    'thumbnail' => 'assets/img/projects/screenshot-data-visualizations.png',
+                ],
+                [
+                    'name' => 'GitGraph',
+                    'description' => 'Displays the previous 7 days of commit data on a Morris.js line graph.',
+                    'github' => 'https://github.com/sanderblue/gitGraph',
+                    'bower' => null,
+                    'npm' => null,
+                    'thumbnail' => 'assets/img/projects/screenshot-gitgraph.png',
                 ],
                 [
                     'name' => 'AjaxRequest',
@@ -34,16 +42,8 @@ class ProjectsController extends Controller
                     'github' => 'https://github.com/sanderblue/ajaxrequest',
                     'bower' => null,
                     'npm' => 'https://www.npmjs.com/package/ajaxrequest',
-                    'thumbnail' => 'http://i.space.com/images/i/000/045/777/i02/light-rays-over-paranal-observatory-1600.jpg',
+                    'thumbnail' => 'assets/img/projects/screenshot-ajaxrequest.png',
                 ],
-                [
-                    'name' => 'Voyager Project',
-                    'description' => 'A small project that displays the distances of the Voyager 1 and Voyager 2 spacecrafts from earth. This small project utilizes a couple libraries provided by NASA.',
-                    'github' => 'https://github.com/sanderblue/ajaxrequest',
-                    'bower' => null,
-                    'npm' => null,
-                    'thumbnail' => 'http://i.space.com/images/i/000/045/777/i02/light-rays-over-paranal-observatory-1600.jpg',
-                ]
             ]
         ]);
     }

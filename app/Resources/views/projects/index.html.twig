@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% include 'sidebar.html.twig' %}
+    {# {% include 'sidebar.html.twig' %} #}
 
     <div class="align-vertical">
-        <div class="row align-center large-6 align-vertical-up">
+        <div class="row column large-9 small-up-1 medium-up-2 align-vertical-up grid-list">
             {% for project in projects %}
-                <div class="column small-4">
-                    <img class="thumbnail" src="{{ project.thumbnail }}">
+                <div class="column project-panel">
+                    <a href="{{ project.github }}" target="_blank" class="thumbnail-link">
+                        <img class="thumbnail" src="{{ project.thumbnail }}">
+                    </a>
                 </div>
             {% endfor %}
         </div>
