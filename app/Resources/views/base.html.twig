@@ -22,7 +22,9 @@
             {% include 'header.html.twig' %}
         {% endblock %}
 
-        {% block body %}{% endblock %}
+        <div class="outer-container">
+            {% block body %}{% endblock %}
+        </div>
 
         {% block javascripts %}
             <script type="text/javascript" data-main="{{ asset('assets/js/init') }}" src="{{ asset('assets/vendor/requirejs/require.js') }}"></script>

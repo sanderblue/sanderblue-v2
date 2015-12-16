@@ -9,20 +9,31 @@
     <div class="top-bar-right">
         <ul class="dropdown menu align-right" data-dropdown-menu>
             <li class="menu-item text-center">
-                <a href="{{ '' }}" class="has-dropdown">adventurer</a>
-            </li>
-            <li class="menu-item text-center has-submenu">
-                <a href="{{ path('developer') }}" class="has-dropdown">developer</a>
-
+                <a href="{{ '' }}">adventurer</a>
                 <ul class="submenu menu vertical" data-submenu>
                     <li class="menu-item text-center">
-                        <a href="{{ path('projects') }}">projects</a>
+                        <a href="{{ path('photography') }}">photography</a>
                     </li>
+                    <li class="menu-item text-center">
+                        <a href="{{ path('videography') }}">videography</a>
+                    </li>
+                    <li class="menu-item text-center">
+                        <a href="{{ path('hire_me') }}">hire me</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item text-center">
+                <a href="{{ path('developer') }}">developer</a>
+
+                <ul class="submenu menu vertical" data-submenu>
                     <li class="menu-item text-center">
                         <a href="{{ '' }}">about</a>
                     </li>
                     <li class="menu-item text-center">
-                        <a href="{{ '' }}">hire me</a>
+                        <a href="{{ path('projects') }}">projects</a>
+                    </li>
+                    <li class="menu-item text-center">
+                        <a href="{{ path('hire_me') }}">hire me</a>
                     </li>
                 </ul>
             </li>

@@ -8,7 +8,7 @@ $bubbleBorderColor: #e6e6e6;
 $color-blue-base: #31c4f9;
 $font-color-dark-base: rgba(20, 20, 20, 1);
 $font-color-light-base: rgba(230, 230, 230, 1);
-$bg-overlay: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8));
+$bg-overlay: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
 
 // App
 @import 'animations';
@@ -37,13 +37,14 @@ body {
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
     color: $font-color-light-base;
-    background: linear-gradient(rgba(20,20,20, .8), rgba(20,20,20, .8));
+    background: linear-gradient(rgba(20,20,20, .70), rgba(20,20,20, .70));
     height: 100vh;
-    background: $bg-overlay, rgba(0,0,0,0.7) url(../img/ShootingStarsTreeline.jpg?test=3) no-repeat center center fixed;
+    background: $bg-overlay, rgba(0,0,0,0.7) url(../img/projects/clouds_from_plane.jpg?test=4) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
 
     a {
         transition: color 0.2s;
@@ -60,6 +61,11 @@ body {
         -o-animation:      opacity 0.25s;
         animation:         opacity 0.25s;
     }
+}
+
+.outer-container {
+    padding: 3rem 0;
+    height: 100%;
 }
 
 .main-container {

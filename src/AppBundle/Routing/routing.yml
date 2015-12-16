@@ -12,3 +12,23 @@ projects:
     pattern: /projects
     defaults: { _controller: AppBundle:Projects:index }
     requirements: { _method: get }
+
+adventurer:
+    pattern: /adventurer
+    defaults: { _controller: AppBundle:Adventurer:index }
+    requirements: { _method: get }
+
+videography:
+    pattern: /adventurer/videography
+    defaults: { _controller: AppBundle:Adventurer:videography }
+    requirements: { _method: get }
+
+photography:
+    pattern: /adventurer/photography
+    defaults: { _controller: AppBundle:Adventurer:photography }
+    requirements: { _method: get }
+
+hire_me:
+    pattern: /hire
+    defaults: { _controller: AppBundle:Home:hire }
+    requirements: { _method: get }
