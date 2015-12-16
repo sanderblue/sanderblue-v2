@@ -1,0 +1,46 @@
+.experience-row {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.center-line {
+    height: inherit;
+    width: 1px;
+    border-right: 1px solid $font-color-light-base;
+}
+
+.experience-text {
+    padding: 0.5rem 0 0 0;
+}
+
+.circle {
+    @include Varela();
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: $font-color-light-base;
+    color: $font-color-dark-base;
+    margin: 0 auto;
+
+    div {
+        display: block;
+        width: 100%;
+    }
+}
+
+.middle-line {
+    position: relative;
+
+    &:after {
+        content: '';
+        border-left: 1px solid white;
+        height: 200%;
+        width: 1px;
+        left: 49.5%;
+        position: absolute;
+    }
+}
+
+.experience-description {
+    @include Geomanist();
+}

@@ -7,8 +7,10 @@ $contentWidthLarge: 100 - $menuWidthLarge;
 $bubbleBorderColor: #e6e6e6;
 $color-blue-base: #31c4f9;
 $font-color-dark-base: rgba(20, 20, 20, 1);
-$font-color-light-base: rgba(230, 230, 230, 1);
-$bg-overlay: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
+$font-color-light-base: rgba(240, 240, 240, 1);
+$font-color-link-base: rgba(235, 235, 235, 0.75);
+$font-color-link-hover: rgba(250, 250, 250, 0.85);
+$bg-gradient: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
 
 // App
 @import 'animations';
@@ -21,25 +23,16 @@ $bg-overlay: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
 
 // Pages
 @import 'pages/projects';
-
-@-webkit-keyframes opacity {
-    0%   {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
+@import 'pages/experience';
 
 body {
     @include font-main();
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
     color: $font-color-light-base;
-    background: linear-gradient(rgba(20,20,20, .70), rgba(20,20,20, .70));
+    background: $bg-gradient;
     height: 100vh;
-    background: $bg-overlay, rgba(0,0,0,0.7) url(../img/projects/clouds_from_plane.jpg?test=4) no-repeat center center fixed;
+    background: $bg-gradient, rgba(0,0,0,0.7) url(../img/projects/clouds_from_plane.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -47,11 +40,11 @@ body {
     overflow: hidden;
 
     a {
-        transition: color 0.2s;
-        color: rgba(225, 225, 225, 0.75);
+        transition: color 200ms;
+        color: $font-color-link-base;
 
         &:hover {
-            color: rgba(225, 225, 225, 1);
+            color: $font-color-link-hover;
         }
     }
 
@@ -69,7 +62,7 @@ body {
 }
 
 .main-container {
-    margin-top: 10%;
+    margin-top: 50px;
 }
 
 .non-font {
@@ -80,8 +73,11 @@ body {
 }
 
 .align-vertical {
-     @include flexbox();
-     height: 100vh;
+    @include flexbox();
+
+    &.hero-container {
+        height: 100vh;
+    }
 
     .align-vertical-up {
         margin-top: -100px;

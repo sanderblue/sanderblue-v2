@@ -8,6 +8,11 @@ developer:
     defaults: { _controller: AppBundle:Developer:index }
     requirements: { _method: get }
 
+experience:
+    pattern: /developer/experience
+    defaults: { _controller: AppBundle:Developer:experience }
+    requirements: { _method: get }
+
 projects:
     pattern: /projects
     defaults: { _controller: AppBundle:Projects:index }

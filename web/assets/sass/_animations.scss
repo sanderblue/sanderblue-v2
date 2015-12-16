@@ -1,8 +1,19 @@
 @keyframes border-width {
-  0% {
-    border-width: 0;
-  }
-  100% {
-    border-width: 100%;
-  }
+    0% {
+        border-width: 0;
+    }
+
+    100% {
+        border-width: 100%;
+    }
+}
+
+@-webkit-keyframes opacity {
+    0%   {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

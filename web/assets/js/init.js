@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: './assets',
+    baseUrl: '/assets',
     paths: {
         'jquery': 'vendor/jquery/dist/jquery',
         'foundation': 'vendor/foundation-sites/dist/foundation',

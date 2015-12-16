@@ -12,4 +12,9 @@ class DeveloperController extends Controller
     {
         return $this->render('developer/index.html.twig', []);
     }
+
+    public function experienceAction(Request $request)
+    {
+        return $this->render('developer/experience.html.twig', []);
+    }
 }

@@ -15,6 +15,6 @@ class HomeController extends Controller
 
     public function hireAction(Request $request)
     {
-        return $this->render('home/index.html.twig', []);
+        return $this->render('home/about.html.twig', []);
     }
 }
