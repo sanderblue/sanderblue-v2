@@ -25,6 +25,7 @@ $bg-gradient: linear-gradient($bg-gradient-color, $bg-gradient-color);
 // Pages
 @import 'pages/projects';
 @import 'pages/experience';
+@import 'pages/photography';
 
 body {
     @include font-main();

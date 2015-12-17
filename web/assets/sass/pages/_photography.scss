@@ -1,0 +1,18 @@
+.owl-carousel {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    margin: 0 20px;
+    max-height: 820px;
+    overflow: hidden;
+
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}

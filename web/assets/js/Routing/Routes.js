@@ -2,21 +2,21 @@ define(
 [
     'backbone',
     'js/Controllers/IndexController',
-    'js/Controllers/DeveloperController'
+    'js/Controllers/DeveloperController',
+    'js/Controllers/PhotographyController'
 ],
 function(
     Backbone,
     IndexController,
-    DeveloperController
+    DeveloperController,
+    PhotographyController
 )
 {
     var AppRouter = Backbone.Router.extend({
         routes: {
             '': 'index',
-            'developer': 'developer'
-            // ,
-            // 'designer': 'designer',
-            // 'adventurer': 'adventurer',
+            'developer': 'developer',
+            'adventurer/photography': 'photography'
         },
 
         index: function() {
@@ -25,16 +25,11 @@ function(
 
         developer: function() {
             return new DeveloperController();
+        },
+
+        photography: function() {
+            return new PhotographyController();
         }
-        // ,
-
-        // designer: function() {
-        //     return new DesignerController();
-        // },
-
-        // adventurer: function() {
-        //     return new AdventurerController();
-        // }
     });
 
     var appRouter = new AppRouter();
