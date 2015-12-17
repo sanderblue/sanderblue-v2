@@ -4,28 +4,21 @@
     {# {% include 'sidebar.html.twig' %} #}
 
     <div class="main-container">
-        <div class="row column small-10 small-up-1 medium-up-2 large-up-2 grid-list">
+        <div class="page-title text-center">
+            projects
+        </div>
+        <div class="page-description text-center">
+            The projects displayed below are just a few of my side projects I've worked on over the past few years.
+        </div>
+        <div class="row column small-9 small-up-1 medium-up-2 large-up-2 grid-list">
             {% for project in projects %}
                 <div class="column project-panel">
                     <a href="{{ project.github }}" target="_blank" class="thumbnail-link">
                         <img class="thumbnail" src="{{ project.thumbnail }}">
+                        <div class="project-title text-center">{{ project.title }}</div>
                     </a>
                 </div>
             {% endfor %}
-            {# {% for project in projects %}
-                <div class="column project-panel">
-                    <a href="{{ project.github }}" target="_blank" class="thumbnail-link">
-                        <img class="thumbnail" src="{{ project.thumbnail }}">
-                    </a>
-                </div>
-            {% endfor %}
-            {% for project in projects %}
-                <div class="column project-panel">
-                    <a href="{{ project.github }}" target="_blank" class="thumbnail-link">
-                        <img class="thumbnail" src="{{ project.thumbnail }}">
-                    </a>
-                </div>
-            {% endfor %} #}
         </div>
     </div>
 {% endblock %}

@@ -2,7 +2,16 @@ $circle-size: 100px;
 
 .experience-row {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 75px;
+}
+
+.experience-company {
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.experience-title {
+    margin-bottom: 4px;
 }
 
 .center-line {
@@ -14,6 +23,7 @@ $circle-size: 100px;
 .experience-text {
     padding: 0.05rem 0 0 0;
     font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .circle {

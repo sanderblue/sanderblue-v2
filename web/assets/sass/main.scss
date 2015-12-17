@@ -85,3 +85,13 @@ body {
     }
 }
 
+.page-title {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.page-description {
+    @include Geomanist();
+    margin-bottom: 2rem;
+}
+
