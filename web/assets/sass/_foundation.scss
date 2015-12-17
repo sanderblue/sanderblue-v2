@@ -1,3 +1,5 @@
+$f-spacing-default: 0.9375rem;
+
 h1,
 h2,
 h3,
@@ -9,7 +11,7 @@ h6 {
 
 p {
     @include font-paragraph();
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 2;
     letter-spacing: 0.025rem;
 }
@@ -63,4 +65,11 @@ $off-canvas-width-small: 150px;
     border: 0;
     width: 100%;
     min-width: auto;
+}
+
+.column {
+    &.padding-large {
+        padding-right: $f-spacing-default * 2;
+        padding-left: $f-spacing-default * 2;
+    }
 }

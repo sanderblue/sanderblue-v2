@@ -1,6 +1,8 @@
+$circle-size: 100px;
+
 .experience-row {
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .center-line {
@@ -10,13 +12,14 @@
 }
 
 .experience-text {
-    padding: 0.5rem 0 0 0;
+    padding: 0.05rem 0 0 0;
+    font-size: 0.9rem;
 }
 
 .circle {
     @include Varela();
-    width: 125px;
-    height: 125px;
+    width: $circle-size;
+    height: $circle-size;
     border-radius: 50%;
     background: $font-color-light-base;
     color: $font-color-dark-base;
