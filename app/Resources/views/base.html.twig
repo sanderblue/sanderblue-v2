@@ -28,6 +28,11 @@
         </div>
 
         {% block javascripts %}
+            <script>
+                require = {
+                    urlArgs: "bust=" + (new Date()).getTime()
+                };
+            </script>
             <script type="text/javascript" data-main="{{ asset('assets/js/init') }}" src="{{ asset('assets/vendor/requirejs/require.js') }}"></script>
         {% endblock %}
     </body>

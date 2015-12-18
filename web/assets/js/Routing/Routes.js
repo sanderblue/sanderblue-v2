@@ -16,7 +16,7 @@ function(
         routes: {
             '': 'index',
             'developer': 'developer',
-            'adventurer/photography': 'photography'
+            'photography': 'photography'
         },
 
         index: function() {
@@ -39,6 +39,12 @@ function(
     // });
 
     Backbone.history.start({ pushState: true });
+
+    if (window.Foundation) {
+        $(function() {
+            $(document).foundation();
+        });
+    }
 
     return appRouter;
 });

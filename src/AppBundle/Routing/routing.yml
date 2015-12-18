@@ -9,7 +9,7 @@ developer:
     requirements: { _method: get }
 
 experience:
-    pattern: /developer/experience
+    pattern: /experience
     defaults: { _controller: AppBundle:Developer:experience }
     requirements: { _method: get }
 
@@ -24,12 +24,12 @@ adventurer:
     requirements: { _method: get }
 
 videography:
-    pattern: /adventurer/videography
+    pattern: /videography
     defaults: { _controller: AppBundle:Adventurer:videography }
     requirements: { _method: get }
 
 photography:
-    pattern: /adventurer/photography
+    pattern: /photography
     defaults: { _controller: AppBundle:Adventurer:photography }
     requirements: { _method: get }
 

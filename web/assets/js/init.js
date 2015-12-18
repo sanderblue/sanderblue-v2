@@ -1,18 +1,19 @@
 requirejs.config({
     baseUrl: '/assets',
     paths: {
+        'app': 'js/app',
         'jquery': 'vendor/jquery/dist/jquery',
         'foundation': 'vendor/foundation-sites/dist/foundation',
         'backbone': 'vendor/backbone/backbone',
         'underscore': 'vendor/underscore/underscore',
-        'owlcarousel': 'vendor/node_modules/owlcarousel/owl-carousel/owl.carousel.min'
+        'swiper': 'vendor/Swiper/dist/js/swiper.jquery.umd'
     },
     shim: {
-        'js/app': {
-            deps: ['jquery', 'backbone']
+        'app': {
+            deps: ['jquery', 'underscore', 'backbone']
         },
         'jquery': {
-            exports: ['jQuery', '$']
+            exports: ['$']
         },
         'foundation': {
             exports: ['Foundation'],
@@ -24,6 +25,10 @@ requirejs.config({
         },
         'underscore': {
             exports: ['_']
+        },
+        'swiper': {
+            exports: ['Swiper'],
+            deps: ['jquery']
         }
     }
 });

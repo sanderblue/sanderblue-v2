@@ -1,18 +1,80 @@
-.owl-carousel {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    overflow: hidden;
+$carousel-max-width: 1080px;
+$carousel-max-height: $carousel-max-width / 1.6;
+$carousel-thumbnails-max-height: $carousel-max-height * 0.12;
+$carousel-full-max-height: $carousel-max-height + $carousel-thumbnails-max-height;
+
+.gallery-container {
+    height: 100%;
+    max-height: $carousel-full-max-height;
+    background-color: rgba(20, 20, 20, 0.5)
 }
 
-.carousel-item {
-    margin: 0 20px;
-    max-height: 820px;
-    overflow: hidden;
+.swiper-container {
+    width: 100%;
+    max-width: $carousel-max-width;
+    max-height: $carousel-max-height;
+    margin-left: auto;
+    margin-right: auto;
 
-    img {
-        display: block;
-        height: auto;
-        width: 100%;
+    &.gallery-top {
+        max-height: $carousel-max-height;
+        margin-top: 50px;
     }
 }
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-thumbs {
+    height: 12%;
+    max-height: $carousel-thumbnails-max-height;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    transition: opacity 500ms ease;
+    cursor: pointer;
+
+    &:not(.swiper-slide-active):hover {
+        opacity: 0.7;
+    }
+}
+
+.gallery-thumbs .swiper-slide-active {
+    opacity: 0.9;
+}
+
+// .carousel {
+//     width: 100%;
+//     max-width: $carousel-max-width;
+//     max-height: $carousel-max-height;
+//     margin: 60px auto;
+// }
+
+// .gallery-thumbs {
+//     .swiper-slide {
+//         background-size: cover;
+//         background-position: center;
+//     }
+// }
+
+
+// .carousel-item {
+//     margin: 0 auto;
+//     max-width: $carousel-item-max-width;
+//     max-height: $carousel-item-max-height;
+//     overflow: hidden;
+
+//     img {
+//         display: block;
+//         height: auto;
+//         width: 100%;
+//         opacity: 0;
+//     }
+// }

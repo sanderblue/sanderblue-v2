@@ -5,9 +5,9 @@ define(
 function() {
 
     function DeveloperController(options) {
-        this.test = 'test';
+        console.debug('DeveloperController');
 
-        console.log('DeveloperController');
+        this.test = 'test';
     }
 
     return DeveloperController;

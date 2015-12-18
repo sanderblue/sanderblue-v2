@@ -1,14 +1,11 @@
 define(
 [
-    'js/Models/User'
+
 ],
-function(User) {
+function() {
 
     function IndexController(options) {
-        this.user = new User();
-
-        console.debug('User', this.user);
-        console.debug('Full Name:', this.user.getFullName());
+        console.debug('IndexController');
     }
 
     return IndexController;
