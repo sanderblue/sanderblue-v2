@@ -1,5 +1,6 @@
 .top-bar {
     background: rgba(18, 18, 18, 0.21);
+    height: 40px;
 
     &.fixed {
         position: fixed;
@@ -7,10 +8,13 @@
         left: 0;
         right: 0;
         z-index: 10;
+        line-height: 1;
     }
 }
 
 .top-bar-left,
 .top-bar-right {
-    width: 50%;
+    width: 49.45%;
+    display: inline-block;
+    box-sizing: border-box;
 }
