@@ -7,7 +7,7 @@
         font-size: 2rem;
         line-height: normal;
         width: inherit;
-        color: rgba(250, 250, 250, 0.93);
+        color: rgba(245, 245, 245, 0.93);
         text-shadow: 1px 1px 3px rgba(20, 20, 20, 0.5);
 
         @media screen and (min-width: 40rem) {
@@ -142,7 +142,7 @@ $social-icon-scale-end: 0.99;
     text-align: center;
     position: relative;
     z-index: 1;
-    color: rgba(240, 240, 240, 0.5);
+    color: rgba(240, 240, 240, 0.6);
     background: rgba(255, 255, 255, 0.075);
     -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
     -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;

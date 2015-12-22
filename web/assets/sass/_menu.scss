@@ -14,10 +14,11 @@
     .menu-item {
         a  {
             font-weight: 100;
-            color: rgba(230, 230, 230, 0.85);
+            color: $font-color-link-base;
             padding: 0.75rem 1.75rem;
             position: relative;
             z-index: 2;
+            letter-spacing: 0.01em;
 
             &:before,
             &:after {
@@ -42,7 +43,7 @@
             }
 
             &:hover {
-                color: rgba(240, 240, 240, 1);
+                color: $font-color-link-hover;
 
                 &:before,
                 &:after {
@@ -57,7 +58,8 @@
     .menu-item {
         a {
             @include Geomanist();
-            font-size: 0.9rem;
+            font-size: 0.925rem;
+
         }
     }
 }
