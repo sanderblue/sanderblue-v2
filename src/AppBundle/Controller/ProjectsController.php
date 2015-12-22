@@ -14,7 +14,7 @@ class ProjectsController extends Controller
             'projects' => [
                 [
                     'title' => 'The Solar System in 3D',
-                    'description' => "A scaled 3D model of the Solar System, powered by Three.js and WebGL. All objects within this project have been modeled to scale based on real astronomical data. This includes the planets' rotations, orbits, and geometry. The scene currently renders the sun, thousands of stars, the asteriod belt, the planets and their moons.",
+                    'description' => "A scaled 3D model of the Solar System, powered by Three.js and WebGL. All objects within this project have been modeled to scale based on real astronomical data. The scene currently renders the sun, thousands of stars, the asteriod belt, the planets and their moons.",
                     'github' => 'https://github.com/sanderblue/solar-system-threejs',
                     'bower' => null,
                     'npm' => null,
@@ -30,7 +30,7 @@ class ProjectsController extends Controller
                 ],
                 [
                     'title' => 'GitGraph',
-                    'description' => 'Displays the previous 7 days of commit data on a Morris.js line graph.',
+                    'description' => "Utilizes Github's developer API and displays the previous 7 days of commit data on a Morris.js line graph.",
                     'github' => 'https://github.com/sanderblue/gitGraph',
                     'bower' => null,
                     'npm' => null,
@@ -38,7 +38,7 @@ class ProjectsController extends Controller
                 ],
                 [
                     'title' => 'AjaxRequest',
-                    'description' => 'Minimalist AJAX request module with zero dependencies.',
+                    'description' => 'Minimalist AJAX request module with zero dependencies. Written with ES6 and transpiled with Babel for ES5 compliance. The built module is UMD compliant.',
                     'github' => 'https://github.com/sanderblue/ajaxrequest',
                     'bower' => null,
                     'npm' => 'https://www.npmjs.com/package/ajaxrequest',

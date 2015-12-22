@@ -45,7 +45,8 @@ body {
         transition: color 200ms;
         color: $font-color-link-base;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $font-color-link-hover;
         }
     }
