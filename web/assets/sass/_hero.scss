@@ -5,8 +5,10 @@
 
     .full-name {
         font-size: 2rem;
+        line-height: normal;
         width: inherit;
-        color: rgba(240, 240, 240, 0.9);
+        color: rgba(250, 250, 250, 0.93);
+        text-shadow: 1px 1px 3px rgba(20, 20, 20, 0.5);
 
         @media screen and (min-width: 40rem) {
             font-size: 5rem;
@@ -118,9 +120,92 @@
     .expertise {
         font-size: 1rem;
         letter-spacing: 0.25rem;
+    }
+}
 
-        .expertise-link {
 
+/**
+ * Social Icons
+ */
+$social-icon-size: 41px;
+$social-icon-font-size: 1.65rem;
+$social-icon-scale-end: 0.99;
+
+.social-profile-link {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 8px;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: rgba(240, 240, 240, 0.5);
+    background: rgba(255, 255, 255, 0.075);
+    -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+    -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+    transition: transform ease-out 200ms, background 200ms, color 750ms;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    &:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: '';
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: -1;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: $font-color-link-hover;
+
+        i {
+            -webkit-transform: scale($social-icon-scale-end);
+            -moz-transform: scale($social-icon-scale-end);
+            -ms-transform: scale($social-icon-scale-end);
+            transform: scale($social-icon-scale-end);
+        }
+
+        &:after {
+            -webkit-animation: sonarEffect 1200ms ease-out 75ms;
+            -moz-animation: sonarEffect 1200ms ease-out 75ms;
+            animation: sonarEffect 1200ms ease-out 75ms;
+        }
+    }
+
+    i {
+        -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+        -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+        transition: transform ease-out 0.1s, background 0.2s;
+        transform-origin: center;
+        font-size: $social-icon-font-size;
+        height: inherit;
+        display: block;
+
+        &:before {
+            height: inherit;
+            width: 100%;
+            max-width: $social-icon-size;
+            text-align: center;
+            display: block;
+            line-height: $social-icon-size;
+            letter-spacing: 0.01em;
         }
     }
 }

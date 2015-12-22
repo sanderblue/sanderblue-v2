@@ -1,19 +1,117 @@
+/**
+ * Border Width
+ */
 @keyframes border-width {
     0% {
         border-width: 0;
     }
-
     100% {
         border-width: 100%;
     }
 }
 
-@-webkit-keyframes opacity {
-    0%   {
+@-webkit-keyframes border-width {
+    0% {
+        border-width: 0;
+    }
+    100% {
+        border-width: 100%;
+    }
+}
+
+@-moz-keyframes border-width {
+    0% {
+        border-width: 0;
+    }
+    100% {
+        border-width: 100%;
+    }
+}
+
+
+/**
+ * Opacity
+ */
+@keyframes opacity {
+    0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/**
+ * Sonar Effect
+ */
+$sonar-circle-width: 4px;
+$sonar-color: rgba(188, 230, 254, 0.4);
+$sonar-opacity-start: 0.2;
+$sonar-opacity-middle: 0.4;
+$sonar-opacity-end: 0;
+$sonar-scale-end: 1.25;
+$sonar-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 $sonar-circle-width $sonar-circle-width $sonar-color, 0 0 0 $sonar-circle-width rgba(255, 255, 255, 0.8);
+
+@keyframes sonarEffect {
+    0% {
+        opacity: $sonar-opacity-start;
+    }
+    40% {
+        opacity: $sonar-opacity-middle;
+        box-shadow: $sonar-box-shadow;
+    }
+    100% {
+        box-shadow: $sonar-box-shadow;
+        transform: scale($sonar-scale-end);
+        opacity: $sonar-opacity-end;
+    }
+}
+
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: $sonar-opacity-start;
+    }
+    40% {
+        opacity: $sonar-opacity-middle;
+        box-shadow: $sonar-box-shadow;
+    }
+    100% {
+        box-shadow: $sonar-box-shadow;
+        -webkit-transform: scale($sonar-scale-end);
+        opacity: $sonar-opacity-end;
+    }
+}
+
+@-moz-keyframes sonarEffect {
+    0% {
+        opacity: $sonar-opacity-start;
+    }
+    40% {
+        opacity: $sonar-opacity-middle;
+        box-shadow: $sonar-box-shadow;
+    }
+    100% {
+        box-shadow: $sonar-box-shadow;
+        -moz-transform: scale($sonar-scale-end);
+        opacity: $sonar-opacity-end;
     }
 }
