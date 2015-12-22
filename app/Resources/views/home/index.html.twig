@@ -21,6 +21,14 @@
             </div>
             <div class="expertise text-center">
                 <a class="expertise-link text-center" href="{{ path('developer') }}">GET IN TOUCH</a>
+
+                <div class="profile-links">
+                    {% for profile in socialProfiles %}
+                        <a href="{{ profile.url }}" class="social-profile-link" target="_blank">
+                            <i class="fi-social-{{ profile.name }}"></i>
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

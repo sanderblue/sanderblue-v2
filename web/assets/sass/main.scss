@@ -1,8 +1,5 @@
 // Vendor
 @import '../vendor/bourbon/app/assets/stylesheets/bourbon';
-// @import '../vendor/node_modules/owlcarousel/owl-carousel/owl.transitions.scss';
-// @import '../vendor/node_modules/owlcarousel/owl-carousel/owl.carousel.scss';
-// @import '../vendor/node_modules/owlcarousel/owl-carousel/owl.theme.scss';
 
 // App Variables
 $menuWidthLarge: 25%;
@@ -54,10 +51,10 @@ body {
     }
 
     * {
-        -webkit-animation: opacity 0.25s;
-        -moz-animation:    opacity 0.25s;
-        -o-animation:      opacity 0.25s;
-        animation:         opacity 0.25s;
+        -webkit-animation: opacity 250ms;
+        -moz-animation:    opacity 250ms;
+        -o-animation:      opacity 250ms;
+        animation:         opacity 250ms;
     }
 }
 
@@ -67,7 +64,7 @@ body {
 }
 
 .main-container {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .non-font {
