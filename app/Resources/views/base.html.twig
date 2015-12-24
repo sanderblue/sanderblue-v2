@@ -6,31 +6,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <meta name="author"  content="">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="author"  content="Sander Blue">
+        <title>{% block title %}Sander Blue{% endblock %}</title>
 
         {% block globalStylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
-
-            {# {% if app.debug %}
-                <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
-                <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
-            {% else %}
-                {% stylesheets
-                    'assets/css/vendor/foundation.min.css'
-                    'assets/css/main.min.css'
-                %}
-                    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
-                {% endstylesheets %}
-            {% endif %} #}
         {% endblock %}
 
         {% block stylesheets '' %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon/favicon.ico') }}" />
     </head>
-    <body cz-shortcut-listen="true">
+    <body>
         {% block header %}
             {% include 'header.html.twig' %}
         {% endblock %}
@@ -40,11 +28,13 @@
         </div>
 
         {% block javascripts %}
-            {# <script>
-                require = {
-                    urlArgs: "bust=" + (new Date()).getTime()
-                };
-            </script> #}
+            {% if app.debug %}
+                <script>
+                    require = {
+                        urlArgs: "bust=" + (new Date()).getTime()
+                    };
+                </script>
+            {% endif %}
             <script type="text/javascript" data-main="{{ asset('assets/js/init') }}" src="{{ asset('assets/vendor/requirejs/require.js') }}"></script>
             <script>
                 (function(i, s, o, g, r, a, m) {
