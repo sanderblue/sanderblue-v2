@@ -10,8 +10,17 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block globalStylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
-            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
+            {% if app.debug %}
+                <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
+            {% else %}
+                {% stylesheets
+                    'assets/css/vendor/foundation.min.css'
+                    'assets/css/main.min.css'
+                %}
+                    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+                {% endstylesheets %}
+            {% endif %}
         {% endblock %}
 
         {% block stylesheets '' %}
