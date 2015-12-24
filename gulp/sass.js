@@ -20,25 +20,6 @@ gulp.task('sass', function() {
     ;
 });
 
-gulp.task('foundation', function() {
-    var sourceFiles = [
-        './web/assets/vendor/foundation-sites/foundation-sites.scss',
-        './web/assets/vendor/foundation-icon-fonts/_foundation-icons.scss'
-    ];
-
-    return gulp.src(sourceFiles)
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(minify())
-        .pipe(concat('foundation.css'))
-        .pipe(sourcemaps.write())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('./web/assets/css/vendor'))
-    ;
-});
-
 gulp.task('watch', function() {
     gulp.watch('./web/assets/sass/**/*.scss', ['sass']);
 });
