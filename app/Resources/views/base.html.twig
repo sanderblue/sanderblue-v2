@@ -1,4 +1,4 @@
-{% set route = app.request.attributes.get('_route') %}
+x`{% set route = app.request.attributes.get('_route') %}
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,10 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block globalStylesheets %}
-            {% if app.debug %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
+
+            {# {% if app.debug %}
                 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
             {% else %}
@@ -20,7 +23,7 @@
                 %}
                     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
                 {% endstylesheets %}
-            {% endif %}
+            {% endif %} #}
         {% endblock %}
 
         {% block stylesheets '' %}
