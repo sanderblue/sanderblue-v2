@@ -14,7 +14,7 @@ class ProjectsController extends Controller
             'projects' => [
                 [
                     'title' => 'The Solar System in 3D',
-                    'description' => "A scaled 3D model of the Solar System, powered by Three.js and WebGL. All objects within this project have been modeled to scale based on real astronomical data. The scene currently renders the sun, thousands of stars, the asteriod belt, the planets and their moons.",
+                    'description' => "A scaled 3D model of the Solar System, powered by Three.js and WebGL. All objects within this project have been modeled to scale based on real astronomical data.",
                     'github' => 'https://github.com/sanderblue/solar-system-threejs',
                     'bower' => null,
                     'npm' => null,
