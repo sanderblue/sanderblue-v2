@@ -2,7 +2,7 @@ $circle-size: 100px;
 
 .experience-row {
     position: relative;
-    padding-bottom: 65px;
+    min-height: 260px;
 }
 
 .experience-company {
@@ -47,7 +47,7 @@ $circle-size: 100px;
     &:after {
         content: '';
         border-left: 1px solid white;
-        height: 200%;
+        height: 160px;
         width: 1px;
         left: 49.5%;
         position: absolute;
