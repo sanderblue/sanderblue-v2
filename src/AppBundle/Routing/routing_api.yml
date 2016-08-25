@@ -1,0 +1,4 @@
+api_home:
+    pattern: /api/v1
+    defaults: { _controller: AppBundle:Api/Data:data }
+    requirements: { _method: get }

@@ -1,39 +1,39 @@
 home:
     pattern: /
-    defaults: { _controller: AppBundle:Home:index }
+    defaults: { _controller: AppBundle:Web/Home:index }
     requirements: { _method: get }
 
 developer:
     pattern: /developer
-    defaults: { _controller: AppBundle:Developer:index }
+    defaults: { _controller: AppBundle:Web/Developer:index }
     requirements: { _method: get }
 
 experience:
     pattern: /experience
-    defaults: { _controller: AppBundle:Developer:experience }
+    defaults: { _controller: AppBundle:Web/Developer:experience }
     requirements: { _method: get }
 
 projects:
     pattern: /projects
-    defaults: { _controller: AppBundle:Projects:index }
+    defaults: { _controller: AppBundle:Web/Projects:index }
     requirements: { _method: get }
 
 adventurer:
     pattern: /adventurer
-    defaults: { _controller: AppBundle:Adventurer:index }
+    defaults: { _controller: AppBundle:Web/Adventurer:index }
     requirements: { _method: get }
 
 videography:
     pattern: /videography
-    defaults: { _controller: AppBundle:Adventurer:videography }
+    defaults: { _controller: AppBundle:Web/Adventurer:videography }
     requirements: { _method: get }
 
 photography:
     pattern: /photography
-    defaults: { _controller: AppBundle:Adventurer:photography }
+    defaults: { _controller: AppBundle:Web/Adventurer:photography }
     requirements: { _method: get }
 
 hire_me:
     pattern: /hire
-    defaults: { _controller: AppBundle:Home:hire }
+    defaults: { _controller: AppBundle:Web/Home:hire }
     requirements: { _method: get }

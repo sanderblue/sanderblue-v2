@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace AppBundle\Controller\Web;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,13 +20,21 @@ class ProjectsController extends Controller
                     'npm' => null,
                     'thumbnail' => 'assets/img/projects/thumbnail-solar-system-threejs.jpg',
                 ],
+                // [
+                //     'title' => 'Data Visualizations',
+                //     'description' => 'A project to explore data visualization utilizing the Chart.js library.',
+                //     'github' => 'https://github.com/sanderblue/data-visualizations',
+                //     'bower' => null,
+                //     'npm' => null,
+                //     'thumbnail' => 'assets/img/projects/thumbnail-data-visualizations.jpg',
+                // ],
                 [
-                    'title' => 'Data Visualizations',
-                    'description' => 'A project to explore data visualization utilizing the Chart.js library.',
-                    'github' => 'https://github.com/sanderblue/data-visualizations',
+                    'title' => 'AjaxRequest',
+                    'description' => 'Minimalist AJAX request module with zero dependencies. Written with ES6 and transpiled with Babel for ES5 compliance. The built module is UMD compliant.',
+                    'github' => 'https://github.com/sanderblue/ajaxrequest',
                     'bower' => null,
-                    'npm' => null,
-                    'thumbnail' => 'assets/img/projects/thumbnail-data-visualizations.jpg',
+                    'npm' => 'https://www.npmjs.com/package/ajaxrequest',
+                    'thumbnail' => 'assets/img/projects/thumbnail-ajaxrequest.jpg',
                 ],
                 [
                     'title' => 'GitGraph',
@@ -35,14 +43,6 @@ class ProjectsController extends Controller
                     'bower' => null,
                     'npm' => null,
                     'thumbnail' => 'assets/img/projects/thumbnail-gitgraph.jpg',
-                ],
-                [
-                    'title' => 'AjaxRequest',
-                    'description' => 'Minimalist AJAX request module with zero dependencies. Written with ES6 and transpiled with Babel for ES5 compliance. The built module is UMD compliant.',
-                    'github' => 'https://github.com/sanderblue/ajaxrequest',
-                    'bower' => null,
-                    'npm' => 'https://www.npmjs.com/package/ajaxrequest',
-                    'thumbnail' => 'assets/img/projects/thumbnail-ajaxrequest.jpg',
                 ],
             ]
         ]);

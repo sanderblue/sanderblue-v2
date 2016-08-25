@@ -9,7 +9,7 @@ parameters:
     locale: en
     database_host: 127.0.0.1
     database_port: null
-    database_name: sanderblue
+    database_name: solarsystem
     database_user: root
     database_password: ibmchinccd
     mailer_transport: smtp
@@ -68,12 +68,22 @@ assetic:
 doctrine:
     dbal:
         driver:   pdo_mysql
-        host:     "%database_host%"
         port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
+        dbname:   solarsystem
+        user:     root
+        password: ibmchinccd
         charset:  UTF8
+        server_version: 5.6
+
+# doctrine:
+#     dbal:
+#         driver:   pdo_mysql
+#         host:     "%database_host%"
+#         port:     "%database_port%"
+#         dbname:   "%database_name%"
+#         user:     "%database_user%"
+#         password: "%database_password%"
+#         charset:  UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
