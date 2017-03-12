@@ -18,8 +18,13 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "~6.0.4",
     "requirejs": "~2.1.22",
-    "foundation-icon-fonts": "*"
+    "foundation-icon-fonts": "*",
+    "foundation-sites": "^6.3.1"
+  },
+  "resolutions": {
+    "foundation-sites": "^6.3.1",
+    "jquery": "~2.1.0",
+    "what-input": "~4.0.3"
   }
 }

@@ -1,20 +1,19 @@
 requirejs.config({
-    baseUrl: '/assets',
-    paths: {
+    'baseUrl': '/assets',
+    'paths': {
         'app': 'js/app',
         'jquery': 'vendor/jquery/dist/jquery',
-        'foundation': 'vendor/foundation-sites/dist/foundation'
+        'foundation': 'vendor/foundation-sites/dist/js/foundation'
     },
-    shim: {
+    'shim': {
         'app': {
-            deps: ['jquery']
+            'deps': ['jquery']
         },
         'jquery': {
-            exports: ['$']
+            'exports': ['$']
         },
         'foundation': {
-            exports: ['Foundation'],
-            deps: ['jquery']
+            'deps': ['jquery']
         }
     }
 });
