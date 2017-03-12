@@ -1,7 +1,10 @@
 define(
 [
-    'js/Routing/Routes'
+    'jquery',
+    'foundation'
 ],
-function() {
-
+function ($) {
+    $(function() {
+        $(document).foundation();
+    });
 });

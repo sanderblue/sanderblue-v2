@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="Hi, my name is Sander Blue and I'm a software engineer.">
         <meta name="author"  content="Sander Blue">
         <title>{% block title %}Sander Blue{% endblock %}</title>
 
@@ -23,9 +23,9 @@
             {% include 'header.html.twig' %}
         {% endblock %}
 
-        <div class="outer-container">
+        <main class="outer-container" role="main">
             {% block body %}{% endblock %}
-        </div>
+        </main>
 
         {% block javascripts %}
             {% if app.debug %}

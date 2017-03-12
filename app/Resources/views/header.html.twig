@@ -8,30 +8,18 @@
     </div>
     <div class="top-bar-right">
         <ul class="dropdown menu align-right" data-dropdown-menu>
-            {# <li class="menu-item text-center">
-                <a href="{{ '' }}">adventurer</a>
-                <ul class="submenu menu vertical" data-submenu>
-                    <li class="menu-item text-center">
-                        <a href="{{ path('photography') }}">photography</a>
-                    </li>
-                    <li class="menu-item text-center">
-                        <a href="{{ path('videography') }}">videography</a>
-                    </li>
-                </ul>
-            </li> #}
             <li class="menu-item text-center">
-                <a href="{{ path('developer') }}">developer</a>
-
+                <a>info</a>
                 <ul class="submenu menu vertical" data-submenu>
+                    <li class="menu-item text-center">
+                        <a href="{{ path('developer') }}">about</a>
+                    </li>
                     <li class="menu-item text-center">
                         <a href="{{ path('projects') }}">projects</a>
                     </li>
                     <li class="menu-item text-center">
                         <a href="{{ path('experience') }}">experience</a>
                     </li>
-                    {# <li class="menu-item text-center">
-                        <a href="{{ path('hire_me') }}">hire me</a>
-                    </li> #}
                 </ul>
             </li>
         </ul>
