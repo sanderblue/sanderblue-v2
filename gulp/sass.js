@@ -23,7 +23,7 @@ var DIST_PATH = './web/assets/css';
 
 gulp.task('sass', function() {
     return gulp.src(SCSS_FILES)
-        .pipe(cache('sass'))
+        // .pipe(cache('sass'))
         .pipe(progeny())
         .pipe(sourcemaps.init())
         .pipe(plumber())
@@ -36,10 +36,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(DIST_PATH))
     ;
 });
-
-// gulp.task('watch', function() {
-//     gulp.watch('./web/assets/sass/**/*.scss', ['sass']);
-// });
 
 gulp.task('watch:sass', ['sass'], function() {
     browserSync.init({

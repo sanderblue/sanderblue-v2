@@ -12,6 +12,8 @@
     }
 
     .menu-item {
+        min-width: 10rem;
+
         a  {
             font-weight: 100;
             color: $font-color-link-base;
