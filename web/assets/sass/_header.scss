@@ -1,20 +1,33 @@
-.top-bar {
-    background: rgba(18, 18, 18, 0.21);
-    height: 40px;
+$header-height: 2.5rem;
 
-    &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        line-height: 1;
+.top-bar {
+    height: $header-height;
+
+    .top-bar-left,
+    .top-bar-right {
+        height: inherit;
+        width: 50%;
+
+        @include breakpoint(medium) {
+            width: auto;
+        }
     }
 }
 
-.top-bar-left,
-.top-bar-right {
-    width: 49.45%;
-    display: inline-block;
-    box-sizing: border-box;
+.top-bar-home {
+    display: table;
+    height: $header-height;
+}
+
+.top-bar-home-link {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: $header-height;
+    letter-spacing: 0.01em;
+    @include border-hover-animation();
+
+    @include breakpoint(medium) {
+        min-width: 8rem;
+    }
 }

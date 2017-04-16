@@ -23,7 +23,7 @@ var DIST_PATH = './web/assets/css';
 
 gulp.task('sass', function() {
     return gulp.src(SCSS_FILES)
-        // .pipe(cache('sass'))
+        .pipe(cache('sass'))
         .pipe(progeny())
         .pipe(sourcemaps.init())
         .pipe(plumber())
@@ -34,6 +34,7 @@ gulp.task('sass', function() {
             suffix: '.min'
         }))
         .pipe(gulp.dest(DIST_PATH))
+        .pipe(browserSync.stream())
     ;
 });
 
@@ -63,7 +64,7 @@ function handleSassError(error) {
     process.stderr.write(error.messageFormatted + '\n');
 
     // If in production environment, kill the process with failure exit code.
-    if (environment === 'prod') {
+    if (process.env.NODE_ENV === 'prod') {
         process.exit(1);
     } else {
         beep();

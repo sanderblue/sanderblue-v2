@@ -1,67 +1,106 @@
-.menu {
-    &.align-left {
-        @media screen and (min-width: 40rem) {
-            margin-left: 2%;
-        }
-    }
+.main-menu-dropdown {
+    min-height: 2.5rem;
 
-    &.align-right {
-        @media screen and (min-width: 40rem) {
-            margin-right: 2%;
-        }
+    .top-bar & {
+        background-color: transparent;
     }
 
     .menu-item {
-        min-width: 10rem;
+        min-width: 3rem;
+        text-align: right;
+        display: block;
 
-        a  {
-            font-weight: 100;
-            color: $font-color-link-base;
-            padding: 0.75rem 1.75rem;
-            position: relative;
-            z-index: 2;
+        @include breakpoint(medium) {
+            min-width: 8rem;
+            text-align: center;
+        }
+
+        > a {
             letter-spacing: 0.01em;
-
-            &:before,
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: 0px !important;
-                height: 1px !important;
-                width: 0% !important;
-                transition: width 0.2s;
-                background-color: $color-blue-base;
-            }
-
-            &:before {
-                right: 50%;
-                transform: rotate(180deg);
-                -webkit-transform: translate(180deg);
-            }
-
-            &:after {
-                left: 50%;
-            }
-
-            &:hover {
-                color: $font-color-link-hover;
-
-                &:before,
-                &:after {
-                    width: 50% !important;
-                }
-            }
+            @include border-hover-animation(center-out);
         }
     }
 }
 
-.submenu {
-    .menu-item {
-        a {
-            @include Geomanist();
-            font-size: 0.925rem;
+.main-submenu-items {
+    max-width: 8rem;
 
-        }
+    @include breakpoint(medium) {
+        max-width: initial;
     }
 }
+
+// .menu-dropdown-parent {
+//     > li {
+//         display: block;
+//     }
+// }
+
+// .menu {
+//     &.align-left {
+//         @include breakpoint(medium) {
+//             margin-left: 2%;
+//         }
+//     }
+
+//     &.align-right {
+//         @include breakpoint(medium) {
+//             margin-right: 2%;
+//         }
+//     }
+
+//     .menu-item {
+//         min-width: 10rem;
+
+//         a  {
+//             font-weight: 100;
+//             color: $font-color-link-base;
+//             padding: 0.75rem 1.75rem;
+//             position: relative;
+//             z-index: 2;
+//             letter-spacing: 0.01em;
+//             height: inherit;
+
+//             &:before,
+//             &:after {
+//                 content: '';
+//                 display: block;
+//                 position: absolute;
+//                 bottom: 0px !important;
+//                 height: 1px !important;
+//                 width: 0% !important;
+//                 transition: width 0.2s;
+//                 background-color: $color-blue-base;
+//             }
+
+//             &:before {
+//                 right: 50%;
+//                 transform: rotate(180deg);
+//                 -webkit-transform: translate(180deg);
+//             }
+
+//             &:after {
+//                 left: 50%;
+//             }
+
+//             &:hover {
+//                 color: $font-color-link-hover;
+
+//                 &:before,
+//                 &:after {
+//                     width: 50% !important;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .submenu {
+//     .menu-item {
+//         a {
+//             @include Geomanist();
+//             font-size: 0.925rem;
+//             background-color: $menu-background-color;
+//         }
+//     }
+// }

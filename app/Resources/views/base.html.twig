@@ -10,13 +10,12 @@
         <title>{% block title %}Sander Blue{% endblock %}</title>
 
         {% block globalStylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor/foundation.min.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.min.css') }}">
         {% endblock %}
 
         {% block stylesheets '' %}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon/favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon/favicon.ico') }}">
     </head>
     <body>
         {% block header %}

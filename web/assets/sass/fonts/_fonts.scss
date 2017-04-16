@@ -1,10 +1,4 @@
 /**
- * Foundation Icon Fonts
- */
-@include font-face('foundation-icons', '../vendor/foundation-icon-fonts/foundation-icons', $file-formats: eot svg ttf woff);
-
-
-/**
  * App Fonts
  */
 @include font-face('Varela', '../fonts/varelaround/varelaround-regular-webfont');

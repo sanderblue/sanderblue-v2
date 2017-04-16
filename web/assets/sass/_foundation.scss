@@ -1,3 +1,22 @@
+$dropdownmenu-arrows: false;
+
+/**
+ * Foundation Icons
+ */
+$fi-path: '../vendor/foundation-icon-fonts';
+
+/**
+ * Topbar
+ */
+$topbar-background: rgba(18, 18, 18, 0.3);
+$topbar-submenu-background: rgba(18, 18, 18, 0.3);
+
+@import '../vendor/foundation-icon-fonts/_foundation-icons.scss';
+@import '../vendor/foundation-sites/scss/util/util';
+@import '../vendor/foundation-sites/scss/foundation';
+
+@include foundation-everything();
+
 $f-spacing-default: 0.9375rem;
 
 h1,
@@ -18,11 +37,11 @@ p {
 
 .top-bar {
     padding: 0;
-    background-color: transparent;
+    // background-color: transparent;
 
-    ul {
-        background-color: inherit;
-    }
+    // ul {
+    //     background-color: inherit;
+    // }
 }
 
 .off-canvas,
@@ -49,7 +68,7 @@ $off-canvas-width-small: 150px;
 
 .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after {
     border: none;
-    top: initial;
+    top: unset;
     width: initial;
     height: 0;
 }
@@ -58,10 +77,10 @@ $off-canvas-width-small: 150px;
     float: none;
     margin-top: 0;
     margin-left: 0;
+    top: initial;
 }
 
 .dropdown.menu .submenu {
-    background: rgba(18, 18, 18, 0.21);
     border: 0;
     width: 100%;
     min-width: auto;
