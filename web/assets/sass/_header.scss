@@ -25,9 +25,12 @@ $header-height: 2.5rem;
     text-align: center;
     width: $header-height;
     letter-spacing: 0.01em;
-    @include border-hover-animation();
 
     @include breakpoint(medium) {
         min-width: 8rem;
+    }
+
+    @include breakpoint(large) {
+        @include border-hover-animation();
     }
 }
