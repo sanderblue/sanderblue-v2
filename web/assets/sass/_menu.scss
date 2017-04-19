@@ -17,7 +17,10 @@
 
         > a {
             letter-spacing: 0.01em;
-            @include border-hover-animation(center-out);
+
+            @include breakpoint(large) {
+                @include border-hover-animation(center-out);
+            }
         }
     }
 }
@@ -29,78 +32,3 @@
         max-width: initial;
     }
 }
-
-// .menu-dropdown-parent {
-//     > li {
-//         display: block;
-//     }
-// }
-
-// .menu {
-//     &.align-left {
-//         @include breakpoint(medium) {
-//             margin-left: 2%;
-//         }
-//     }
-
-//     &.align-right {
-//         @include breakpoint(medium) {
-//             margin-right: 2%;
-//         }
-//     }
-
-//     .menu-item {
-//         min-width: 10rem;
-
-//         a  {
-//             font-weight: 100;
-//             color: $font-color-link-base;
-//             padding: 0.75rem 1.75rem;
-//             position: relative;
-//             z-index: 2;
-//             letter-spacing: 0.01em;
-//             height: inherit;
-
-//             &:before,
-//             &:after {
-//                 content: '';
-//                 display: block;
-//                 position: absolute;
-//                 bottom: 0px !important;
-//                 height: 1px !important;
-//                 width: 0% !important;
-//                 transition: width 0.2s;
-//                 background-color: $color-blue-base;
-//             }
-
-//             &:before {
-//                 right: 50%;
-//                 transform: rotate(180deg);
-//                 -webkit-transform: translate(180deg);
-//             }
-
-//             &:after {
-//                 left: 50%;
-//             }
-
-//             &:hover {
-//                 color: $font-color-link-hover;
-
-//                 &:before,
-//                 &:after {
-//                     width: 50% !important;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .submenu {
-//     .menu-item {
-//         a {
-//             @include Geomanist();
-//             font-size: 0.925rem;
-//             background-color: $menu-background-color;
-//         }
-//     }
-// }
