@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Hi, my name is Sander Blue and I'm a software engineer.">
         <meta name="author"  content="Sander Blue">
@@ -19,12 +19,16 @@
     </head>
     <body>
         {% block header %}
-            {% include 'header.html.twig' %}
+            {% include '_header.html.twig' %}
         {% endblock %}
 
         <main class="outer-container" role="main">
             {% block body %}{% endblock %}
         </main>
+
+        {% block footer %}
+            {% include '_footer.html.twig' %}
+        {% endblock %}
 
         {% block javascripts %}
             {% if app.debug %}
