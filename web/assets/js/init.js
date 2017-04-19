@@ -1,34 +1,19 @@
 requirejs.config({
-    baseUrl: '/assets',
-    paths: {
+    'baseUrl': '/assets',
+    'paths': {
         'app': 'js/app',
         'jquery': 'vendor/jquery/dist/jquery',
-        'foundation': 'vendor/foundation-sites/dist/foundation',
-        'backbone': 'vendor/backbone/backbone',
-        'underscore': 'vendor/underscore/underscore',
-        'swiper': 'vendor/Swiper/dist/js/swiper.jquery.umd'
+        'foundation': 'vendor/foundation-sites/dist/js/foundation'
     },
-    shim: {
+    'shim': {
         'app': {
-            deps: ['jquery', 'underscore', 'backbone']
+            'deps': ['jquery']
         },
         'jquery': {
-            exports: ['$']
+            'exports': ['$']
         },
         'foundation': {
-            exports: ['Foundation'],
-            deps: ['jquery']
-        },
-        'backbone': {
-            exports: ['Backbone'],
-            deps: ['underscore']
-        },
-        'underscore': {
-            exports: ['_']
-        },
-        'swiper': {
-            exports: ['Swiper'],
-            deps: ['jquery']
+            'deps': ['jquery']
         }
     }
 });

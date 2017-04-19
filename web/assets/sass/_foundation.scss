@@ -1,3 +1,44 @@
+$dropdownmenu-arrows: false;
+
+/**
+ * Foundation Icons
+ */
+$fi-path: '../vendor/foundation-icon-fonts';
+
+/**
+ * Topbar
+ */
+$topbar-background: rgba(18, 18, 18, 0.4);
+$topbar-submenu-background: rgba(18, 18, 18, 0.4);
+
+/**
+ * Typography
+ */
+ $header-styles: (
+    'small': (
+        'h1': ('font-size': 32),
+        'h2': ('font-size': 24),
+        'h3': ('font-size': 20),
+        'h4': ('font-size': 18),
+        'h5': ('font-size': 17),
+        'h6': ('font-size': 16)
+    ),
+    'medium': (
+        'h1': ('font-size': 48),
+        'h2': ('font-size': 40),
+        'h3': ('font-size': 32),
+        'h4': ('font-size': 25),
+        'h5': ('font-size': 20),
+        'h6': ('font-size': 16)
+    ),
+);
+
+@import '../vendor/foundation-icon-fonts/_foundation-icons.scss';
+@import '../vendor/foundation-sites/scss/util/util';
+@import '../vendor/foundation-sites/scss/foundation';
+
+@include foundation-everything();
+
 $f-spacing-default: 0.9375rem;
 
 h1,
@@ -6,41 +47,22 @@ h3,
 h4,
 h5,
 h6 {
+    @include font-main();
     font-weight: 700;
 }
 
 p {
     @include font-paragraph();
     font-size: 1.2rem;
-    line-height: 2;
     letter-spacing: 0.025rem;
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 .top-bar {
     padding: 0;
-    background-color: transparent;
-
-    ul {
-        background-color: inherit;
-    }
-}
-
-.off-canvas,
-.off-canvas-content {
-    background: transparent;
-}
-
-$off-canvas-width: 150px;
-$off-canvas-width-small: 150px;
-
-.off-canvas {
-    &.off-canvas-small {
-        width: $off-canvas-width-small;
-    }
-}
-
-.off-canvas-content {
-    box-shadow: none;
 }
 
 .thumbnail {
@@ -49,7 +71,7 @@ $off-canvas-width-small: 150px;
 
 .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after {
     border: none;
-    top: initial;
+    top: unset;
     width: initial;
     height: 0;
 }
@@ -58,10 +80,10 @@ $off-canvas-width-small: 150px;
     float: none;
     margin-top: 0;
     margin-left: 0;
+    top: initial;
 }
 
 .dropdown.menu .submenu {
-    background: rgba(18, 18, 18, 0.21);
     border: 0;
     width: 100%;
     min-width: auto;

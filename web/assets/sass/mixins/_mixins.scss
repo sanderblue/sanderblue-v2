@@ -7,3 +7,89 @@
     -webkit-box-align: center;
     align-items: center;
 }
+
+@mixin border-hover-animation($animation-direction: center-out) {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        height: 1px;
+        width: 0%;
+        transition: width 0.2s;
+        background-color: $color-blue-base;
+    }
+
+    @if $animation-direction == left-to-right {
+        &:before {
+            left: 0;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    @if $animation-direction == right-to-left {
+        &:before {
+            right: 0;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+
+        &:active,
+        &:focus {
+            &:before {
+                width: 0;
+            }
+        }
+    }
+
+    @if $animation-direction == center-out {
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            height: 1px;
+            width: 0%;
+            transition: width 0.2s;
+            background-color: $color-blue-base;
+        }
+
+        &:before {
+            right: 50%;
+            transform: rotate(180deg);
+            -webkit-transform: translate(180deg);
+        }
+
+        &:after {
+            left: 50%;
+        }
+
+        &:hover {
+            &:before,
+            &:after {
+                width: 50%;
+            }
+        }
+
+        &:active,
+        &:focus {
+            &:before,
+            &:after {
+                width: 0;
+            }
+        }
+    }
+}

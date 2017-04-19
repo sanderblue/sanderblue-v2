@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var minify = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 
@@ -28,7 +28,7 @@ gulp.task('foundation', function() {
     return gulp.src(sourceFiles)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(minify())
+        .pipe(cleanCSS())
         .pipe(concat('foundation.css'))
         .pipe(sourcemaps.write())
         .pipe(rename({

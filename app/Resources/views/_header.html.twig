@@ -1,0 +1,31 @@
+<header class="top-bar">
+    {% spaceless %}
+        <div class="top-bar-left">
+            <div class="top-bar-home">
+                <a class="top-bar-home-link" href="{{ path('home') }}">
+                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="sb">
+                </a>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <ul class="dropdown menu main-menu-dropdown" role="menubar" data-dropdown-menu>
+                <li class="menu-item is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" data-is-click="false">
+                    <a>
+                        <i class="fi-list"></i>
+                    </a>
+                    <ul class="menu vertical submenu is-dropdown-submenu first-sub main-submenu-items" role="menu" data-submenu>
+                        <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                            <a href="{{ path('about') }}">about</a>
+                        </li>
+                        <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                            <a href="{{ path('projects') }}">projects</a>
+                        </li>
+                        <li class="menu-item is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                            <a href="{{ path('experience') }}">experience</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    {% endspaceless %}
+</header>

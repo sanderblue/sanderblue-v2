@@ -1,10 +1,4 @@
 /**
- * Foundation Icon Fonts
- */
-@include font-face('foundation-icons', '../vendor/foundation-icon-fonts/foundation-icons', $file-formats: eot svg ttf woff);
-
-
-/**
  * App Fonts
  */
 @include font-face('Varela', '../fonts/varelaround/varelaround-regular-webfont');
@@ -18,23 +12,23 @@
  * Font Families
  */
 @mixin Varela() {
-    font-family: 'Varela', sans-serif;
+    font-family: 'Varela', Helvetica, sans-serif;
 }
 
 @mixin Galano() {
-    font-family: 'Galano', sans-serif;
+    font-family: 'Galano', Helvetica, sans-serif;
 }
 
 @mixin GalanoBold() {
-    font-family: 'GalanoBold', sans-serif;
+    font-family: 'GalanoBold', Helvetica, sans-serif;
 }
 
 @mixin Geomanist() {
-    font-family: 'Geomanist', sans-serif;
+    font-family: 'Geomanist', Helvetica, sans-serif;
 }
 
 @mixin GeomanistItalic() {
-    font-family: 'GeomanistItalic', sans-serif;
+    font-family: 'GeomanistItalic', Helvetica, sans-serif;
 }
 
 @mixin Main() {

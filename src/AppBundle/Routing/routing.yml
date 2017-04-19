@@ -3,14 +3,14 @@ home:
     defaults: { _controller: AppBundle:Web/Home:index }
     requirements: { _method: get }
 
-developer:
-    pattern: /developer
-    defaults: { _controller: AppBundle:Web/Developer:index }
+about:
+    pattern: /about
+    defaults: { _controller: AppBundle:Web/About:index }
     requirements: { _method: get }
 
 experience:
     pattern: /experience
-    defaults: { _controller: AppBundle:Web/Developer:experience }
+    defaults: { _controller: AppBundle:Web/About:experience }
     requirements: { _method: get }
 
 projects:
