@@ -10,7 +10,7 @@ $font-color-dark-base: rgba(20, 20, 20, 1);
 $font-color-light-base: rgba(250, 250, 250, 1);
 $font-color-link-base: rgba(245, 245, 245, 0.85);
 $font-color-link-hover: rgba(250, 250, 250, 0.95);
-$bg-gradient-color: rgba(15, 15, 15, 0.45);
+$bg-gradient-color: rgba(15, 15, 15, 0.5);
 $bg-gradient: linear-gradient($bg-gradient-color, $bg-gradient-color);
 
 // App
@@ -127,5 +127,12 @@ main {
         position: relative;
         top: 0.5px;
         margin-right: 2px;
+    }
+}
+
+.about-section {
+    p {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

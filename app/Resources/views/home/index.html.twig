@@ -1,31 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="align-vertical hero-container text-center">
-        <div class="heading-main text-center">
-            <div class="full-name wrapper">
-                <span class="first-name">
-                    <span class="s">s</span>
-                    <span class="a">a</span>
-                    <span class="n">n</span>
-                    <span class="d">d</span>
-                    <span class="e">e</span>
-                    <span class="r">r</span>
-                </span>
-                <span class="last-name">
-                    <span class="b">b</span>
-                    <span class="l">l</span>
-                    <span class="u">u</span>
-                    <span class="e">e</span>
-                </span>
-            </div>
-            <div class="profile-links text-center">
-                {% for profile in socialProfiles %}
-                    <a href="{{ profile.url }}" class="social-profile-link" target="_blank">
-                        <i class="fi-social-{{ profile.name }}"></i>
-                    </a>
-                {% endfor %}
-            </div>
+    <div class="align-vertical hero-container">
+        <div class="row">
+            <section class="heading-main text-center">
+                <div class="full-name wrapper">
+                    <span class="first-name">
+                        <span class="s">s</span>
+                        <span class="a">a</span>
+                        <span class="n">n</span>
+                        <span class="d">d</span>
+                        <span class="e">e</span>
+                        <span class="r">r</span>
+                    </span>
+                    <span class="last-name">
+                        <span class="b">b</span>
+                        <span class="l">l</span>
+                        <span class="u">u</span>
+                        <span class="e">e</span>
+                    </span>
+                </div>
+                <div class="profile-links text-center">
+                    {% for profile in socialProfiles %}
+                        <a href="{{ profile.url }}" class="social-profile-link" target="_blank">
+                            <i class="fi-social-{{ profile.name }}"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+            <section class="row about-section">
+                <div class="small-12 medium-6 columns">
+                    <h3 class="text-center">Who I Am</h3>
+                    <p>By the time I was old enough to start playing with Legos it was obvious that I was meant to be a builder. Over time my choice of toys transitioned from Legos to electronics and then to computers and the internet. And while I was always tinkering with some form of technology, my other passions were sports and being outside in nature. If I'm not working on something programming-related, I'm most likely spending time outdoors hiking, biking, skiing, or snowboarding.</p>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <h3 class="text-center">What I Do</h3>
+                    <p>With 6 years of professional software development experience, and several more as a hobby before that, I've had the opportunity to work with incredibly talented people as well as work on some amazing projects. While being classically trained as an architect, I discovered early on the term "architecture" transcends multiple disciplines. It's not just about buildings. It's about thoughtfully creating objects and spaces that communicate well with each other. This is my passion.</p>
+                </div>
+            </section>
         </div>
     </div>
 {% endblock %}
