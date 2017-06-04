@@ -33,6 +33,13 @@ $topbar-submenu-background: rgba(18, 18, 18, 0.4);
     ),
 );
 
+/**
+ * Labels
+ */
+$label-font-size: 0.7rem;
+$label-radius: 0.188rem;
+$label-padding: 0.3125rem;
+
 @import '../vendor/foundation-icon-fonts/_foundation-icons.scss';
 @import '../vendor/foundation-sites/scss/util/util';
 @import '../vendor/foundation-sites/scss/foundation';

@@ -11,6 +11,11 @@
                         <div class="project-info text-center">
                             <div class="project-title">{{ project.title }}</div>
                             <div class="project-description">{{ project.description }}</div>
+                            <div class="project-tags">
+                                {% for tag in project.tags %}
+                                    <span class="label tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
                         </div>
                         <img class="thumbnail" src="{{ project.thumbnail }}">
                     </a>
