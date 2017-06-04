@@ -1,0 +1,12 @@
+ul {
+    &.list {
+        list-style: none;
+        margin-left: 0.125rem;
+
+        li {
+            @include Geomanist();
+            border-left: 0.0625rem solid darken(white, 30%);
+            padding-left: 0.5rem;
+        }
+    }
+}
