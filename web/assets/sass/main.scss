@@ -22,12 +22,18 @@ $bg-gradient: linear-gradient($bg-gradient-color, $bg-gradient-color);
 @import 'footer';
 @import 'hero';
 @import 'menu';
+@import 'background-image'; // variable containing base64 image
 
 // Pages
 @import 'pages/about';
 @import 'pages/projects';
 @import 'pages/experience';
 @import 'pages/photography';
+
+html,
+body {
+    height: 100vh;
+}
 
 body {
     @include font-main();
@@ -36,7 +42,7 @@ body {
     color: $font-color-light-base;
     background: $bg-gradient;
     height: 100vh;
-    background: $bg-gradient, $bg-gradient-color url(../img/projects/clouds_from_plane.jpg) no-repeat center center fixed;
+    background: $bg-gradient, $bg-gradient-color $clouds no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,8 +69,21 @@ body {
 
 header,
 footer {
-    position: relative;
     z-index: 2;
+}
+
+header {
+    position: relative;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(16, 16, 16, 0.4);
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
 }
 
 main {
@@ -76,6 +95,20 @@ main {
 
     @include breakpoint(medium) {
         height: 100%;
+    }
+}
+
+.main-content {
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(medium) {
+        padding-top: 4rem;
+    }
+
+    @include breakpoint(xmedium) {
+        padding-top: 7rem;
     }
 }
 

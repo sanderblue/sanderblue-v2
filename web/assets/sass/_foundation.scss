@@ -8,8 +8,8 @@ $fi-path: '../vendor/foundation-icon-fonts';
 /**
  * Topbar
  */
-$topbar-background: rgba(18, 18, 18, 0.4);
-$topbar-submenu-background: rgba(18, 18, 18, 0.4);
+$topbar-background: rgba(16, 16, 16, 0.4);
+$topbar-submenu-background: rgba(16, 16, 16, 0.4);
 
 /**
  * Typography
@@ -39,6 +39,18 @@ $topbar-submenu-background: rgba(18, 18, 18, 0.4);
 $label-font-size: 0.7rem;
 $label-radius: 0.188rem;
 $label-padding: 0.3125rem;
+
+/**
+ * Media Queries
+ */
+ $breakpoints: (
+   small: 0px,
+   medium: 600px,
+   xmedium: 768px,
+   large: 1024px,
+   xlarge: 1200px,
+   xxlarge: 1440px,
+ );
 
 @import '../vendor/foundation-icon-fonts/_foundation-icons.scss';
 @import '../vendor/foundation-sites/scss/util/util';

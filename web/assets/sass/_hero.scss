@@ -1,3 +1,15 @@
+// .hero-container {
+//     margin-top: 3rem;
+
+//     @include breakpoint(medium) {
+//         margin-top: 4rem;
+//     }
+
+//     @include breakpoint(xmedium) {
+//         margin-top: 7rem;
+//     }
+// }
+
 .heading-main {
     width: 100%;
     display: block;
@@ -9,6 +21,10 @@
         width: inherit;
         color: rgba(245, 245, 245, 0.93);
         text-shadow: 1px 1px 3px rgba(20, 20, 20, 0.5);
+
+        @include breakpoint(medium) {
+            font-size: 3rem;
+        }
 
         @media screen and (min-width: 40rem) {
             font-size: 5rem;
