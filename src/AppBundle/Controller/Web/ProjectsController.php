@@ -13,7 +13,7 @@ class ProjectsController extends Controller
         return $this->render('projects/index.html.twig', [
             'projects' => [
                 [
-                    'title' => 'The Solar System in 3D',
+                    'title' => 'Our Solar System',
                     'description' => "A scaled 3D model of the Solar System, powered by Three.js and WebGL modeled to scale based on real astronomical data.",
                     'demo' => 'http://sanderblue.github.io/solar-system-threejs/',
                     'github' => 'https://github.com/sanderblue/solar-system-threejs',

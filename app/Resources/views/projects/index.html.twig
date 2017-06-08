@@ -6,9 +6,16 @@
     <div class="row column small-11 medium-8 large-6 small-up-1 grid-list">
         {% for project in projects %}
             <div class="column project-panel">
-                <a href="{{ project.github }}" target="_blank" class="thumbnail-link">
+                <div class="inner-panel">
                     <div class="project-info text-center">
                         <div class="project-title">{{ project.title }}</div>
+                        <div class="project-links">
+                            {% if project.demo %}
+                                <a class="tiny hollow button" target="_blank" href="{{ project.demo }}">Demo</a>
+                            {% endif %}
+
+                            <a class="tiny hollow button" target="_blank" href="{{ project.github }}">GitHub</a>
+                        </div>
                         <div class="project-description">{{ project.description }}</div>
                         <div class="project-tags">
                             {% for tag in project.tags %}
@@ -17,7 +24,7 @@
                         </div>
                     </div>
                     <img class="thumbnail" src="{{ project.thumbnail }}">
-                </a>
+                </div>
             </div>
         {% endfor %}
     </div>
